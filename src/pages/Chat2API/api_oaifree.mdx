@@ -19,11 +19,13 @@ Chat2API - Oaifree 是始皇对 OpenAI 相关接口进行转换，模拟 API 调
 
 ### 如何调用
 
+> Team 账号只需把 `<access token>` 替换成 `<access token>,<team account id>`
+
 - **curl**
 ```shell copy filename="curl"
 curl https://api.oaifree.com/v1 \
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer YOUR ACCESS TOKEN" \  # 替换为你的 ACCESS TOKEN
+  -H "Authorization: Bearer <access token>" \  # 替换为你的 ACCESS TOKEN
   -d '{
     "model": "gpt-4o-mini",
     "messages": [
@@ -38,7 +40,7 @@ curl https://api.oaifree.com/v1 \
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="YOUR ACCESS TOKEN",  # 替换为你的 ACCESS TOKEN
+    api_key="<access token>",  # 替换为你的 ACCESS TOKEN
     base_url="https://api.oaifree.com/v1"
 )
 
