@@ -1,0 +1,65 @@
+import { Callout } from 'nextra/components'
+import Image from 'next/image'
+import Link from 'next/link'
+
+
+## Chat2API - Oaifree
+
+### 功能介绍
+
+Chat2API - Oaifree 是始皇对 OpenAI 相关接口进行转换，模拟 API 调用格式，把 access token 传进去就开转，可以实现比如对话、tts、whisper、画图等 API 调用方式。
+
+- 只为ChatGPT Plus提供服务。
+- 目前频控 10/10s，将来一定会跟 LINUX DO Connect 挂钩。
+- 限制了 whisper 上传文件大小为：4M。
+- 支持使用 gizmo，使用 g-xxx 的 id 作为模型名即可。
+- Team 账号只需要传递 ChatGPT-Account-ID 头即可实现切换。
+
+而这一切，只需要 ChatGPT Plus 账号的 Access Token 即可调用！
+
+### 如何调用
+
+- **curl**
+```shell copy filename="curl"
+curl https://api.oaifree.com/v1 \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer YOUR ACCESS TOKEN" \  # 替换为你的 ACCESS TOKEN
+  -d '{
+    "model": "gpt-4o-mini",
+    "messages": [
+      {"role": "system", "content": "You are a helpful assistant."},
+      {"role": "user", "content": "What is a LLM?"}
+    ]
+  }'
+```
+
+- **python**
+```python copy filename="python"
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR ACCESS TOKEN",  # 替换为你的 ACCESS TOKEN
+    base_url="https://api.oaifree.com/v1"
+)
+
+response = client.chat.completions.create(
+  model="gpt-4o-mini",
+  messages=[
+    {"role": "system", "content": "You are a helpful assistant."},
+    {"role": "user", "content": "What is a LLM?"}
+  ]
+)
+```
+
+### 探索更多
+
+|<div style={{ width: '550px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>标题</div>| <div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>作者</div> |
+|------|:------:|
+| <Link href="https://linux.do/t/topic/40928" style={{ textDecoration: 'none', color: 'blue' }}>实话实说，你们的论坛账号更值钱了，已支持gizmo、出图</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/41375" style={{ textDecoration: 'none', color: 'blue' }}>兄弟们，你们的论坛账号更更更值钱了</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/49556" style={{ textDecoration: 'none', color: 'blue' }}>打开Pandora魔盒，再撅OpenAI一次之：whisper + tts</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/51859" style={{ textDecoration: 'none', color: 'blue' }}>小小的改动，行大大的方便</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/50789" style={{ textDecoration: 'none', color: 'blue' }}>ChatGPT Plus金牌销售之Chat2API图片生成+编辑</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/51676" style={{ textDecoration: 'none', color: 'blue' }}>【呼吁】进一步完善Chat2API的图片生成功能</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/41254" style={{ textDecoration: 'none', color: 'blue' }}>【教程】使用access_token在始皇的接口上进行聊天</Link> | @Sam Altman |
+| <Link href="https://linux.do/t/topic/65740" style={{ textDecoration: 'none', color: 'blue' }}>【新手教程】oaifree 喂饭级 Step-by-step 一步步打开潘多拉</Link> | @raspier |

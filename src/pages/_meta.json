@@ -1,0 +1,61 @@
+{
+  "Linux_Do": {
+    "title": "Linux Do",
+    "type": "menu",
+    "items": {
+      "加入社区": {
+          "title": "加入社区",
+          "href": "https://linux.do/"
+      },
+      "社区等级": {
+          "title": "社区等级",
+          "href": "https://connect.linux.do/"
+      },
+      "社区频道": {
+          "title": "社区频道",
+          "href": "https://t.me/linux_do_channel"
+      },
+      "社区群组": {
+          "title": "社区群组",
+          "href": "https://t.me/ja_netfilter_group"
+      },
+      "服务状态": {
+        "title": "服务状态",
+        "href": "https://status.linux.do/"
+      }
+    }
+  },
+  "相关服务": {
+    "title": "相关服务",
+    "type": "menu",
+    "items": {
+      "Oaifree": {
+        "title": "Oaifree",
+        "href": "https://shared.oaifree.com/"
+      },
+      "Fuclaude": {
+        "title": "Fuclaude",
+        "href": "https://demo.fuclaude.com/"
+      },
+      "DeepLX": {
+        "title": "DeepLX",
+        "href": "https://connect.linux.do/"
+      },
+      "Chat2API": {
+        "title": "Chat2API",
+        "href": "https://api.oaipro.com/"
+      },
+      "应用接入": {
+        "title": "应用接入",
+        "href": "https://connect.linux.do/dash/sso"
+      }
+    }
+  },
+  "index": "Wiki 使用说明",
+  "LinuxDo": "Linux Do",
+  "Oaifree": "Oaifree",
+  "Chat2API": "Chat2API",
+  "Fuclaude": "Fuclaude",
+  "DeepLX": "DeepLX",
+  "HttpRW": "HttpRW"
+}

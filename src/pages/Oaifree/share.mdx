@@ -1,0 +1,29 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+## 共享镜像
+
+<Link href="https://shared.oaifree.com" style={{ textDecoration: 'none', color: 'blue' }}>shared.oaifree.com</Link>，点开就用，刷新就换号，来一次次大抽奖，玩的就是心跳。
+
+- 为防止有人恶意破坏，已在对话接口加上官方的道德审查。
+- 加入道德审查处罚统计，按天展示 `恶人榜`。
+- 加入捐赠统计的 `大善人榜` 和 `用量统计` 。
+- 接入 LINUX DO 登录，1级 及以上用户可用。
+- 已支持投递 Access Token。
+- AdGuard 会导致一直跳转本页，无法正常使用。
+
+榜单可前往 <Link href="https://shared.oaifree.com/dashboard" style={{ textDecoration: 'none', color: 'blue' }}>Dashboard</Link> 查询，也可在论坛的 侧栏 - 外部链接 - Shared Chat 进行访问。
+
+## 如何投递 Access Token
+
+```shell copy filename="curl"
+curl -X PUT 'https://shared.oaifree.com/share/tokens' \
+-H 'Content-Type: application/json' \
+-d '{
+    "tokens": [
+        "fk-1",
+        "fk-2",
+        "access token"
+    ]
+}'
+```
