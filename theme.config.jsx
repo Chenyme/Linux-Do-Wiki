@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default {
-  docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/src/pages',
+  docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/',
   toc: {
       backToTop: true
   },
