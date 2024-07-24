@@ -4,23 +4,32 @@ import Link from 'next/link'
 
 ## Linux DO Connect
 
-一套标准的oauth2鉴权，让大家可以共享论坛的用户基本信息：
+### 解释说明
 
-1. id，这是一个不会改变的值。
-2. username，这个值是论坛用户名，它可能会改变。
-3. name，这个值是论坛的用户昵称。
-4. trust_level，0-4的数值，分别对应着0级到4级。
+这是一套标准的 Oauth2 鉴权，让大家可以共享论坛的用户基本信息。
 
-如果一个公益的网站/接口能够拿到这些数值，那么：
+- 可获取字段：
 
-1. 可以通过用户id进行频率限制
-2. 通过trust_level进行额度配给。
-3. 通过用户信息举报滥用。
+|<div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>参数</div>| <div style={{ width: '550px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>说明</div> |
+|:------:|:------:|
+| `id` | 一个不会改变的值 |
+| `username` | 论坛用户名，它可能会改变 |
+| `name` | 论坛的用户昵称 |
+| `trust_level` | 0-4 的数值，分别对应着0级到4级 |
+
+
+如果一个公益的网站/接口能够拿到这些数值，那么就可以：
+
+1. 通过 `id` 进行服务频率限制。
+2. 通过 `trust_level` 进行服务额度配给。
+3. 通过 用户信息 举报滥用。
+4. ...
+
 
 
 ### 如何申请
 
-- 前往<Link href="https://connect.linux.do/" style={{ textDecoration: 'none', color: 'blue' }}>Connect.Linux.Do</Link>，申请你的应用接入。
+- 前往<Link href="https://connect.linux.do/" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>Connect.Linux.Do</Link>，申请你的应用接入。
 
 <br></br>
 <Image src="/connect1.png" width={500} height={200} />
@@ -38,13 +47,9 @@ import Link from 'next/link'
 <Image src="/connect3.png" width={500} height={250} />
 <br></br>
 
-### 如何使用
+### 使用方法
 
-- 引用来源：<Link href="https://linux.do/t/topic/30578/19" style={{ textDecoration: 'none', color: 'blue' }}> @Hua 的回帖</Link>
-
-
-
-**python**
+- **python**
 
 ```shell copy
 pip install Flask requests
@@ -107,10 +112,14 @@ if __name__ == '__main__':
     app.run(debug=True, port=8181)
 ```
 
-## 更多探索
+## 探索更多
+
+<br></br>
+
 |<div style={{ width: '550px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>标题</div>| <div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>作者</div> |
 |------|:------:|
-| <Link href="https://linux.do/t/topic/29954" style={{ textDecoration: 'none', color: 'blue' }}>【让我们来共享论坛用户数据】</Link> | @Neo |
-| <Link href="https://linux.do/t/topic/111903" style={{ textDecoration: 'none', color: 'blue' }}>【LINUX DO Connect 接口更新说明】</Link> | @Neo |
-| <Link href="https://linux.do/t/topic/30578" style={{ textDecoration: 'none', color: 'blue' }}>【小白也能懂的 linuxdo oauth2 快速上手】</Link> | @( ⩌ ˰ ⩌) |
-| <Link href="https://linux.do/t/topic/32752" style={{ textDecoration: 'none', color: 'blue' }}>【Linux do Connect Docs】</Link> | @Reno |
+| <Link href="https://linux.do/t/topic/29954" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>让我们来共享论坛用户数据</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/111903" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>LINUX DO Connect 接口更新说明</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/30578" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>小白也能懂的 linuxdo oauth2 快速上手</Link> | @( ⩌ ˰ ⩌) |
+| <Link href="https://linux.do/t/topic/32752" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>Linux do Connect Docs</Link> | @Reno |
+| <Link href="https://linux.do/t/topic/30578/19" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>社区用户 @Hua 的回帖</Link> | @Hua |

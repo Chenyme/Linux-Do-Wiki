@@ -17,7 +17,7 @@ import Image from 'next/image'
 <Steps>
 ### 新用户
 
-**信任等级0**。默认情况下，所有新用户开始时都是信任等级0，意味着信任尚未建立。这些是刚刚创建账户的访客，还在<Link href="https://blog.discourse.org/2013/03/the-universal-rules-of-civilized-discourse/" style={{ textDecoration: 'none', color: 'blue' }}>学习社区规范和社区工作方式</Link>。新用户的能力出于安全考虑而受到限制——为了新用户和社区的安全。
+**信任等级0**。默认情况下，所有新用户开始时都是信任等级0，意味着信任尚未建立。这些是刚刚创建账户的访客，还在<Link href="https://blog.discourse.org/2013/03/the-universal-rules-of-civilized-discourse/" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>学习社区规范和社区工作方式</Link>。新用户的能力出于安全考虑而受到限制——为了新用户和社区的安全。
 
 
 ### 基本用户
@@ -43,7 +43,7 @@ import Image from 'next/image'
 
 
 ## 提升信任等级
-当你处在不同的信任等级会在社区内拥有不同的权限，你可以自行前往社区官方的<Link href="https://linux.do/t/topic/18797" style={{ textDecoration: 'none', color: 'blue' }}>《Discourse 论坛权限等级表》</Link>内查看并了解各个等级的具体权限。Discourse 论坛权限等级表（包括版主角色）旨在成为一个全面的Discourse功能列表，按信任等级标记，并包括影响这些功能的相关管理员设置。
+当你处在不同的信任等级会在社区内拥有不同的权限，你可以自行前往社区官方的<Link href="https://linux.do/t/topic/18797" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>《Discourse 论坛权限等级表》</Link>内查看并了解各个等级的具体权限。Discourse 论坛权限等级表（包括版主角色）旨在成为一个全面的Discourse功能列表，按信任等级标记，并包括影响这些功能的相关管理员设置。
 
 当然，提升信任等级需要满足一定的条件，下面是提升信任等级的条件：
 
@@ -80,28 +80,63 @@ import Image from 'next/image'
 
 ### 信任等级4
 
-* 始皇是论坛的创始人，他是唯一的领导者-信任等级4。
+* 始皇是论坛的创始人，他是唯一的领导者(即：信任等级4)。
 * 您无法被提升到信任等级4。
 
 </Steps>
+
+### 一图了解 Linux Do 等级要求
+
+
+- 信息参考：<Link href="https://linux.do/t/topic/23574" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>一图了解linux.do等级要求</Link> 来自 <Link href="https://linux.do/u/yang/summary" target="_blank"> **社区用户 @sj** </Link> 的个人帖子
+
+|提升条件|信任等级1|信任等级2|信任等级3|信任等级4|
+|---|:---:|:---:|:---:|:---:|
+|进入至少5个话题|✔️||||
+|阅读至少30篇帖子|✔️||||
+|总共花费10分钟阅读帖子|✔️||||
+|至少访问15天（不必连续）||✔️|||
+|至少点赞1次||✔️|||
+|至少收到1次点赞||✔️|||
+|回复至少3个不同的话题||✔️|||
+|进入至少20个话题||✔️|||
+|阅读至少100篇帖子||✔️|||
+|总共花费60分钟阅读帖子||✔️|||
+|必须至少访问了50%的天数（过去100天内）|||✔️||
+|必须至少在10个不同的非私信话题上进行了回复|||✔️||
+|在过去100天内创建的话题中，必须浏览了25%（上限为500）|||✔️||
+|在过去100天内创建的帖子中，必须阅读了25%（上限为20k）|||✔️||
+|必须收到20个点赞，并送出30个点赞|||✔️||
+|不得收到超过5个垃圾邮件或冒犯性标记|||✔️||
+|过去6个月内不能被暂停或禁言|||✔️||
+|只能由工作人员手动晋升||||✔️|
 
 ## 查询升级状态
 
 ### 官方途径查询
 
-- <Link href="https://linux.do/my/badges" style={{ textDecoration: 'none', color: 'blue' }}>【官方】查看自己的勋章</Link> 不同的勋章对应不同的信任等级。
+<Callout type="info" emoji="">
 
-- <Link href="https://connect.linux.do/" style={{ textDecoration: 'none', color: 'blue' }}>【官方】查看自己的等级</Link>  Linux Do 社区官方查询接口。
+- 通过 <Link href="https://linux.do/my/badges" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>查看自己的勋章</Link> 不同的勋章对应不同的信任等级。
+
+- 通过 <Link href="https://connect.linux.do/" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>Linux Do Connect</Link> 查看自己的信任等级。
+
+</Callout>
+
 
 ### 社区热佬脚本
 
-- <Link href="https://linux.do/t/topic/29204" style={{ textDecoration: 'none', color: 'blue' }}>【油猴脚本】Linux do 查看距离下一级大体差距</Link> 来自 <Link href="https://linux.do/u/Hua/">**社区热佬 @Hua**</Link> 的油猴脚本。
+<Callout type="info" emoji="">
 
-- <Link href="https://linux.do/t/topic/38245" style={{ textDecoration: 'none', color: 'blue' }}>【油猴脚本】摸鱼时间搞了一个站内查看信用等级的油猴脚本</Link> 来自 <Link href="https://linux.do/u/io.oi/summary">**社区热佬 @IO.OI**</Link> 的油猴脚本。
+- <Link href="https://linux.do/t/topic/29204" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>【油猴脚本】Linux do 查看距离下一级大体差距</Link> 来自 <Link href="https://linux.do/u/Hua/" target="_blank">**社区热佬 @Hua**</Link> 的油猴脚本。
+
+- <Link href="https://linux.do/t/topic/38245" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>【油猴脚本】摸鱼时间搞了一个站内查看信用等级的油猴脚本</Link> 来自 <Link href="https://linux.do/u/io.oi/summary" target="_blank">**社区热佬 @IO.OI**</Link> 的油猴脚本。
+
+</Callout>
 
 ## 积分获取渠道和明细
 
-- 来源：<Link href="https://linux.do/t/topic/26306/43" style={{ textDecoration: 'none', color: 'blue' }}> @Neo 的回帖 </Link>
+- 信息来源：<Link href="https://linux.do/t/topic/26306/43" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}> 始皇 @Neo 的回帖 </Link>
 
 |<div style={{ width: '550px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>条件</div>| <div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>分数</div> |
 |------|:------:|
@@ -120,10 +155,13 @@ import Image from 'next/image'
 
 ## 更多探索
 
+<br></br>
+
 |<div style={{ width: '550px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>标题</div>| <div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>作者</div> |
 |------|:------:|
-| <Link href="https://linux.do/t/topic/18797" style={{ textDecoration: 'none', color: 'blue' }}>Discourse 论坛权限等级表</Link> | @Neo |
-| <Link href="https://linux.do/t/topic/16266" style={{ textDecoration: 'none', color: 'blue' }}>如何得知自己的级别？</Link> | @Neo |
-| <Link href="https://linux.do/t/topic/2460" style={{ textDecoration: 'none', color: 'blue' }}>了解 Discourse 信任度</Link> | @晏琳 |
-| <Link href="https://linux.do/t/topic/23574" style={{ textDecoration: 'none', color: 'blue' }}>【总结贴】萌新如何优雅的升级</Link> | @Oen |
-| <Link href="https://linux.do/t/topic/137197" style={{ textDecoration: 'none', color: 'blue' }}>【从0到2】新人答疑清单</Link> | @Clarke.L |
+| <Link href="https://linux.do/t/topic/18797" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>Discourse 论坛权限等级表</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/16266" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>如何得知自己的级别？</Link> | @Neo |
+| <Link href="https://linux.do/t/topic/2460" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>了解 Discourse 信任度</Link> | @晏琳 |
+| <Link href="https://linux.do/t/topic/23574" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>【总结贴】萌新如何优雅的升级</Link> | @Oen |
+| <Link href="https://linux.do/t/topic/137197" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>【从0到2】新人答疑清单</Link> | @思無邪 |
+

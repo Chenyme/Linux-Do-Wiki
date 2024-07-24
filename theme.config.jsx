@@ -38,7 +38,7 @@ export default {
     </>
   ),
   project: {
-    link: 'https://github.com/Chenyme/Linux-Do-Wiki'
+    link: 'https://github.com/Chenyme/Linux-Do-Wiki/tree/main'
   },
   themeSwitch: {
     useOptions() {
