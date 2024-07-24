@@ -1,18 +1,27 @@
 # Linux-Do-Wiki
-Wiki For LINUX DO
+
+
+### Wiki For LINUX DO : [wiki.linux.do](wiki.linux.do)
 
 <br>
 
-### 共建榜相关说明
+## 共建榜相关说明
 
 为营造并鼓励共建环境，秉着**真诚、友善、团结、专业，共建你我引以为荣之社区的精神**。
 
 现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属动态卡片** 以表示感谢！
 
-- Issue 者成功采纳后会获得**专属动态黑卡**
-- PR 者成功 Merge 者后会获得**专属动态白金卡**，且会置顶显示
+[ISSUE / PR 成功后请点击此处记录](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink)
 
-- **反馈地址**：[Linux-Do-Wiki / issues](https://github.com/Chenyme/Linux-Do-Wiki/issues)
+- Issue 成功 采纳 后会在 GitHub 中感谢
+- Issue 累计成功 **采纳3次** / **标记为建设性、重要1次** 后会获得专属动态 **黑卡**
+- Issue 累计成功 **采纳9次** / **标记为建设性、重要4次** 后可升级为专属动态 **白金卡**，置顶显示
+- PR 成功 合并 后会在 GitHub 中感谢
+- PR 成功 **合并2次** / **标记为建设性、重要1次** 后会获得专属动态 **黑卡**
+- PR 成功 **合并6次** / **标记为建设性、重要2次** 后可升级为专属动态 **白金卡**，置顶显示
+
+- **反馈地址**：[Linux Do Wiki GitHub](https://github.com/Chenyme/Linux-Do-Wiki)，若 已达标/可升级/被遗漏，请及时私信[@chenyme🍊](https://linux.do/u/chenyme/summary)
+
 
 <br>
 
