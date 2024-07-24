@@ -12,24 +12,24 @@ import Link from 'next/link'
 - 纯净，没有臃肿的系统提示词。
 - 完美使用 GPT4o-mini，GPT4o，GPT4 和 GPTs。
 - 完全免翻，输入Token即可直接使用。
-- 支持和ChatGPT语音对话，详细请看<Link href="https://linux.do/t/topic/106834" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>《揭秘上午埋下的“彩蛋”》</Link>。
+- 支持和ChatGPT语音对话，详细请看<Link href="https://linux.do/t/topic/106834" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>《揭秘上午埋下的“彩蛋”》</Link>。
 - ...
 
 ### 登录方式
 
 #### Token 填入网页
 
- - 通过始皇的<Link href="https://token.oaifree.com/auth" target="_blank" style={{ textDecoration: 'Access Token', color: 'blue' }}> Access Token </Link>服务获取 Access Token
+ - 通过始皇的<Link href="https://token.oaifree.com/auth" target="_blank" style={{ textDecoration: 'Access Token', color: '#3A9FE8' }}> Access Token </Link>服务获取 Access Token
 
- - 使用 Access Token 在始皇的<Link href="https://chat.oaifree.com/token" target="_blank" style={{ textDecoration: 'Share Token', color: 'blue' }}> Share Token </Link>服务获取 Share Token（**可选**）
+ - 使用 Access Token 在始皇的<Link href="https://chat.oaifree.com/token" target="_blank" style={{ textDecoration: 'Share Token', color: '#3A9FE8' }}> Share Token </Link>服务获取 Share Token（**可选**）
 
- - 打开<Link href="https://new.oaifree.com" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}> new.oaifree.com </Link>，填入 Access Token 或者 Share Token，即可使用！
+ - 打开<Link href="https://new.oaifree.com" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}> new.oaifree.com </Link>，填入 Access Token 或者 Share Token，即可使用！
 
 #### Share Token 链接拼接
 
-- 链接拼接：`https://YOURDOMAIN/auth/login_share?token=SHARE_TOKEN`
+- 链接格式：https://`<yourdomain>`/auth/login_share?token=`<SHARE_TOKEN>`
 
-请确保替换 YOURDOMAIN 为你的域名，SHARE_TOKEN 为你的 Share Token。
+自行替换 YOURDOMAIN 为你的域名，SHARE_TOKEN 为你的 Share Token。
 
 #### Oauth 链接获取
 
@@ -117,6 +117,7 @@ location / {
   proxy_ssl_server_name on;
 }
 ```
+
 
 
 

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default {
-  docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/',
+  docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/tree/main',
   toc: {
       backToTop: true
   },
@@ -38,7 +38,7 @@ export default {
     </>
   ),
   project: {
-    link: 'https://github.com/Chenyme/Linux-Do-Wiki/tree/main'
+    link: 'https://github.com/Chenyme/Linux-Do-Wiki/'
   },
   themeSwitch: {
     useOptions() {

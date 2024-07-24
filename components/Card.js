@@ -20,7 +20,7 @@ const Card = ({ heading, number, validThru, date, name, code }) => {
           <p className={styles.number}>{number}</p>
           <p className={styles.validThru}>{validThru}</p>
           <p className={styles.date}>{date}</p>
-          <p className={styles.name}>{name}</p>
+          <p className={styles.name}>LINUX DO METAVERSE</p>
         </div>
         <div className={styles.flipCardBack}>
           <div className={styles.strip}></div>

@@ -8,10 +8,11 @@
 
 .heading_8264 {
   position: absolute;
-  font-size: 1em;
+  color: #9d8b4e;
+  font-size: 0.9em;
   top: 0.75em;
   right: 1.5em;
-  font-weight: 600;
+  font-weight: 550;
   text-shadow: -0.2px -0.2px 0.2px white, 0.2px -0.2px 0.2px gray,
     -0.2px 0.2px 0.2px white, 0.2px 0.2px 0.2px gray;
 }
@@ -30,51 +31,56 @@
 
 .contactless {
   position: absolute;
-  top: 3.5em;
-  left: 12.4em;
+  top: 3.8em;
+  right: 0.1em;
 }
 
 .number {
   position: absolute;
+  color: #9d8b4e;
   font-weight: 600;
-  letter-spacing: 1px;
+  letter-spacing: 0.1px;
   font-size: 0.75em;
-  top: 7em;
-  left: 1.5em;
+  top: 6.5em;
+  left: 2em;
 }
 
 .date_8264 {
   position: absolute;
+  color: #9d8b4e;
   font-weight: 600;
   font-size: 0.75em;
-  top: 9em;
-  left: 1.5em;
-  letter-spacing: 2px;
+  top: 8.5em;
+  left: 2em;
+  letter-spacing: 0.1px;
 }
 
 .cvc_number {
   position: absolute;
+  color: #9d8b4e;
   font-weight: 600;
   font-size: 0.75em;
-  top: 9em;
-  left: 8.5em;
-  letter-spacing: 2px;
+  top: 8.5em;
+  left: 7.6em;
+  letter-spacing: 0.2px;
 }
 
 .cvc {
   position: absolute;
+  color: #9d8b4e;
   font-weight: 600;
-  font-size: 5px;
-  top: 6.9rem;
-  left: 8rem;
+  font-size: 6px;
+  top: 6.4rem;
+  left: 7.4rem;
 }
 
 .exp {
   position: absolute;
+  color: #9d8b4e;
   font-weight: 600;
-  font-size: 5px;
-  top: 6.9rem;
-  left: 3.8rem;
+  font-size: 6px;
+  top: 6.4rem;
+  left: 4rem;
 }
 
 .name {
@@ -83,16 +89,23 @@
   font-size: 8.5px;
   top: 15em;
   left: 2em;
-  color: #bea35c;
+  color: #9d8b4e;
 }
 
 .strip {
   position: absolute;
-  background-color: white;
+  background-color: #edcb71;
   width: 15em;
   height: 2.25em;
   top: 0;
   border-radius: 1rem 1rem 0 0;
+  background: repeating-linear-gradient(
+    45deg,
+    #edcb71,
+    #edcb71 10px,
+    #d1b665 10px,
+    #d1b665 20px
+  );
 }
 
 .flipCardInner {
@@ -123,11 +136,10 @@
 
 .flipCardFront {
   background: linear-gradient(135deg, #edcb78, #f7e4b2, #fee08b);
-  border: 1px solid fold;
+  border: 1px solid gold;
 }
 
 .flipCardBack {
   background: linear-gradient(135deg, #fee08b, #f7e4b2, #edcb78);
   transform: rotateY(180deg);
 }
-

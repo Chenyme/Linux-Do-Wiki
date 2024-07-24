@@ -1,55 +1,107 @@
 import Card from '../../components/Card';
 import GoldCard from '../../components/GoldCard';
 import Link from 'next/link'
+import styles from '../../components/honorBoard.module.css';
 
 ## 共建荣誉榜
 
-- 按时间顺序，贡献不分先后！
+<br></br>
+<div className={styles.cardContainer}>
+  <GoldCard
+    heading="@Neo"
+    number="0000 0000 0000 0000"
+    date="07/23"
+    code="000"
+  />
+</div>
 
 <br></br>
-<table>
-  <tbody>
-    <tr>
-      <td style={{ padding: "20px" }}>
-        <Card
-          heading="@Sitoi"
-          number="0000 0000 0000 0001"
-          date="07/23"
-          name="@Sitoi"
-          code="001"
-        />
+<div className={styles.cardContainer}>
+  <Card
+    heading="@Sitoi"
+    number="0000 0000 0000 0001"
+    date="07/23"
+    code="001"
+  />
+  <Card
+    heading="@nr0728"
+    number="0000 0000 0000 0002"
+    date="07/23"
+    code="002"
+  />
+  <Card
+    heading="@思無邪"
+    number="0000 0000 0000 0003"
+    date="07/23"
+    code="003"
+  />
+  <Card
+    heading="@王天一"
+    number="0000 0000 0000 0004"
+    date="07/24"
+    code="004"
+  />
+  <Card
+    heading="@崔裕姝"
+    number="0000 0000 0000 0005"
+    date="07/24"
+    code="005"
+  />
+  <Card
+    heading="@KusoJc"
+    number="0000 0000 0000 0006"
+    date="07/24"
+    code="006"
+  />
+  <Card
+    heading="@完全"
+    number="0000 0000 0000 0007"
+    date="07/24"
+    code="007"
+  />
+  <Card
+    heading="@为伊WaYease"
+    number="0000 0000 0000 0008"
+    date="07/24"
+    code="008"
+  />
+  <Card
+    heading="@huqizheng"
+    number="0000 0000 0000 0009"
+    date="07/24"
+    code="009"
+  />
+</div>
 
-      </td>
-      <td style={{ padding: "20px" }}>
-        <Card
-          heading="@nr0728"
-          number="0000 0000 0000 0002"
-          date="07/23"
-          name="@nr0728"
-          code="002"
-        />
-      </td>
-      <td style={{ padding: "20px" }}>
-        <Card
-          heading="@思無邪"
-          number="0000 0000 0000 0003"
-          date="07/23"
-          name="@思無邪"
-          code="003"
-        />
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+**感谢 始皇@Neo 的支持 和 以上各位佬友的付出，让我们一起共建你我引以为荣之社区！**
 
 ## 共建榜相关说明
 
 为营造并鼓励共建环境，秉着**真诚、友善、团结、专业，共建你我引以为荣之社区的精神**。
 
-现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属卡片** 以表示感谢！
+现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属动态卡片** 以表示感谢！
 
-- **反馈地址**：[Linux Do Wiki GitHub](https://github.com/Chenyme/Linux-Do-Wiki)
+
+
+**Issue**
+
+- 成功采纳：获得 15 分
+- Issue标记为建设性、重要：获得 50 分
+
+**PR**
+
+- 成功合并：获得 25 分
+- PR标记为建设性、重要：获得 75 分
+
+**奖励**
+
+- 分数累计大于 0 分：会在GitHub鸣谢。
+- 分数累计达到 50 分：获得专属动态 **黑卡**。
+- 分数累计达到 150 分：升级为专属动态 **白金卡**，并置顶显示。
+
+**反馈地址**：<Link href="https://github.com/Chenyme/Linux-Do-Wiki" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Linux Do Wiki GitHub</Link>，若 已达标/可升级/被遗漏，请及时私信<Link href="https://linux.do/u/chenyme/summary" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}> @chenyme🍊</Link>
+
+**分值明细**：<Link href="https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}> ISSUE / PR 成功后请点击此处记录</Link>
 
 ### 反馈格式和说明
 
@@ -70,17 +122,16 @@ import Link from 'next/link'
 
 ### 试运行说明
 
-- 由于 Wiki 站刚起步，因此共建荣誉榜可能会有一定问题，如有遗漏或BUG请及时私信<Link href="https://github.com/Chenyme/Linux-Do-Wiki" target="_blank" style={{ textDecoration: 'none', color: 'blue' }}>@chenyme🍊</Link>
+- 由于 Wiki 站刚起步，因此共建荣誉榜可能会有一定问题，如有遗漏或BUG请及时私信<Link href="https://linux.do/u/chenyme/summary" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>@chenyme🍊</Link>
 
-- 试运行期间，会对参与PR的 **前 5 位** 共建者（不限于 **建设性** 或 **重要**，只要 **有效** 即可）直接发放 专属卡片，以感谢支持！
+- 试运行期间，会对参与 Issue、PR 的 **前6位** 共建者（不限于 **建设性** 或 **重要**，只要 **有效** 即可）直接发放 专属卡片，以感谢支持！（已结束！）
 
 ### 卡片预览
 
-- C是什么我不懂啊？
+- C是什么我真的一点都不懂啊！
 
-- 仅作纪念，不具备任何实际价值，无任何直接联系，仅供娱乐！
-- 仅作纪念，不具备任何实际价值，无任何直接联系，仅供娱乐！
-- 仅作纪念，不具备任何实际价值，无任何直接联系，仅供娱乐！
+- 此卡仅作纪念，不具备任何实际价值，无任何直接联系，无任何特别暗示，仅供娱乐！
+
 
 <table>
   <tbody>

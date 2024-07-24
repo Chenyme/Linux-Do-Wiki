@@ -45,10 +45,10 @@
 
 .heading {
   position: absolute;
-  font-size: 1em;
+  font-size: 0.9em;
   top: 0.75em;
   right: 1.5em;
-  font-weight: 600;
+  font-weight: 550;
   text-shadow: -0.2px -0.2px 0.2px white, 0.2px -0.2px 0.2px gray,
     -0.2px 0.2px 0.2px white, 0.2px 0.2px 0.2px gray;
 }
@@ -56,13 +56,13 @@
 .logo {
   position: absolute;
   top: 6.8em;
-  left: 11.7em;
+  right: 1em;
 }
 
 .chip {
   position: absolute;
   top: 2.3em;
-  left: 1.5em;
+  left: 1em;
 }
 
 .contactless {
@@ -91,8 +91,8 @@
   position: absolute;
   font-weight: bold;
   font-size: 0.5em;
-  top: 13.6em;
-  left: 3.2em;
+  top: 13.1em;
+  left: 2em;
 }
 
 .name {
@@ -141,6 +141,6 @@
 .code {
   font-weight: bold;
   text-align: center;
-  margin: 0em;
+  margin: -0.31em;
   color: black;
 }
