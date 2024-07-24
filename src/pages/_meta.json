@@ -51,6 +51,11 @@
       }
     }
   },
+  "honer": {
+    "title": "共建荣誉榜",
+    "type": "page",
+    "href": "honor"
+  },
   "index": "Wiki 使用说明",
   "honor": "wiki 共建荣誉榜",
   "LinuxDo": "Linux Do",
