@@ -11,14 +11,23 @@
 
 现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属动态卡片** 以表示感谢！
 
-[ISSUE / PR 成功后请点击此处记录](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink)
+[此处为明细 + ISSUE / PR 成功后请点击此处记录](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink)
 
-- Issue 成功 采纳 后会在 GitHub 中感谢
-- Issue 累计成功 **采纳3次** / **标记为建设性、重要1次** 后会获得专属动态 **黑卡**
-- Issue 累计成功 **采纳9次** / **标记为建设性、重要4次** 后可升级为专属动态 **白金卡**，置顶显示
-- PR 成功 合并 后会在 GitHub 中感谢
-- PR 成功 **合并2次** / **标记为建设性、重要1次** 后会获得专属动态 **黑卡**
-- PR 成功 **合并6次** / **标记为建设性、重要2次** 后可升级为专属动态 **白金卡**，置顶显示
+#### Issue
+
+- 成功采纳：获得 15 分
+- Issue标记为建设性、重要：获得 50 分
+
+#### PR
+
+- 成功合并：获得 25 分
+- PR标记为建设性、重要：获得 75 分
+  
+#### 奖励
+
+分数累计大于 0 分：会在GitHub鸣谢。
+分数累计达到 50 分：获得专属动态 **黑卡**。
+分数累计达到 150 分：升级为专属动态 **白金卡**，并置顶显示。
 
 - **反馈地址**：[Linux Do Wiki GitHub](https://github.com/Chenyme/Linux-Do-Wiki)，若 已达标/可升级/被遗漏，请及时私信[@chenyme🍊](https://linux.do/u/chenyme/summary)
 
