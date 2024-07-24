@@ -3,45 +3,67 @@ Wiki For LINUX DO
 
 <br>
 
-## Issue 或 PR 格式
+### 共建榜相关说明
 
-为了格式统一，便于项目维护，请尽量按以下格式填写(**不强求**)，非常感谢各位热佬的支持和帮助！
+为营造并鼓励共建环境，秉着**真诚、友善、团结、专业，共建你我引以为荣之社区的精神**。
 
-PR 在 Merge 后会在每晚定时更新，非常感谢您的 PR！
+现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属动态卡片** 以表示感谢！
+
+- Issue 者成功采纳后会获得**专属动态黑卡**
+- PR 者成功 Merge 者后会获得**专属动态白金卡**，且会置顶显示
+
+- **反馈地址**：[Linux-Do-Wiki / issues](https://github.com/Chenyme/Linux-Do-Wiki/issues)
+
+<br>
+
+### 反馈格式和说明
+
+为了方便更好的管理和维护 Wiki 站，希望大家在提交 Issue/PR 时遵循一定的格式。
+
+- PR 时请遵循项目框架 Nextra 的编写规范
+- PR 在 Merge 后会在每晚定时更新
+- Issue/PR 提交时的格式和说明 ：
+
 
 | 标题 | Issue内容 |
-| --- | --- |
-| 【错误】xxx页面的xxx内容 | 使用项目报错的地方 |
-| 【修复】xxx页面的xxx内容 | 修复项目错误的地方 |
-| 【新增】xxx页面的xxx内容 | 想要新增的内容 | 
-| 【建议】xxx页面的xxx内容 | 想要建议的内容 | 
-| 【更正】xxx页面的xxx内容 | 想要更新的内容 |
-| 【改进】xxx页面的xxx内容 | 想要改进的内容 |
+|------|:------:|
+| 【建议】xxx页面的xxx内容 | 想要建议的内容 + 理由 + 相关词条（可选） +  社区个人主页链接 |
+| 【错误】xxx页面的xxxBUG | 报告xxx页面内的BUG + 具体情况 + 社区个人主页链接 |
+| 【修复】xxx页面的xxxBUG | xxx页面内的 xxx BUG + 社区个人主页链接 |
+| 【更正】xxx页面的xxx内容 | xxx页面内需要更新的内容 + 社区个人主页链接 |
+| 【新增】xxx页面的xxx内容 | xxx页面内需要新增的内容 + 理由 + 社区个人主页链接 |
+| 【改进】xxx页面的xxx内容 | xxx页面内需要改进的内容 + 理由 + 社区个人主页链接 |
 
 
 <br>
 
-## 维护人员
-@chenyme
+### 特别鸣谢
+
+- 排名不分先后
+
+- [@nr0728](https://github.com/nr0728)、[@Sitoi](https://github.com/Sitoi)
 
 <br>
 
-## 维护日志
+### 维护日志
 
-### 2024-07-23
+维护人员：@chenyme
 
-- **上线：** Linux Do Wiki站
-- **修复：** `编辑页面` 链接跳转失败
-- **更正：** `connect.mdx` 中的标题错误  [@nr0728](https://github.com/nr0728)
-- **更正：** `api_oaifree.mdx` 中的 Team 账号调用 [@Sitoi](https://github.com/Sitoi)
-- **新收录：** [【从0到2】新人答疑清单](https://linux.do/t/topic/137197)
+#### 2024-07-24
+- 上线 Linux Do Wiki - 光荣榜
+- 新增 Linux Do 元宇宙 词条
+- 新增多个收录
+- 优化链接跳转
 
-### 2024-07-22
-- **编写：** Wiki 基本内容
-- **搭建：** 站点基本框架
 
-## 感谢您的帮助！
-[@nr0728](https://github.com/nr0728)、[@Sitoi](https://github.com/Sitoi)
+#### 2024-07-23
+- 上线 Linux Do Wiki站
+- 修复多个页面错误
+
+#### 2024-07-22
+- 完成Wiki 基本内容，站点基本框架
+
+
 
 
 
