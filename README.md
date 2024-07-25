@@ -6,35 +6,53 @@
 
 <h1>Linux Do Wiki</h1>
 
-</div>
+### Wiki For LINUX DO - [wiki.linux.do](wiki.linux.do)
 
-### Wiki For LINUX DO : [wiki.linux.do](wiki.linux.do)
+</div>
 
 <br>
 
-## 共建榜相关说明
+### 💗 感谢我们的贡献者
+
+[![][github-contrib-shield]][github-contrib-link]
+
+<!-- LINK GROUP -->
+
+[github-contrib-link]: https://github.com/Chenyme/Linux-Do-Wiki/graphs/contributors
+[github-contrib-shield]: https://contrib.rocks/image?repo=Chenyme/Linux-Do-Wiki
+
+<br>
+
+### 共建榜相关说明
 
 为营造并鼓励共建环境，秉着**真诚、友善、团结、专业，共建你我引以为荣之社区的精神**。
 
 现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属动态卡片** 以表示感谢！
 
-[此处为明细 + ISSUE / PR 成功后请点击此处记录](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink)
+分值明细公示：[Wiki 共建明细表](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink) **ISSUE / PR 成功后也请点击此处记录**
 
-#### Issue
+<br>
 
-- 成功采纳：获得 15 分
-- Issue 标记为建设性、重要：获得 50 分
+### 奖励分数表
 
-#### PR
+| 类型       | 事件内容                 | 分数  |
+| ---------- | ------------------------ |-------|
+| Issue      | 成功采纳                  | 15    |
+| Issue      | 标记为建设性、重要         | 50    |
+| PR         | 成功合并                  | 25    |
+| PR         | 标记为建设性、重要         | 75    |
 
-- 成功合并：获得 25 分
-- PR 标记为建设性、重要：获得 75 分
+<br>
 
-#### 奖励
+### 奖励制度
 
-分数累计大于 0 分：会在 GitHub 鸣谢。
-分数累计达到 50 分：获得专属动态 **黑卡**。
-分数累计达到 150 分：升级为专属动态 **白金卡**，并置顶显示。
+| 条件         | 奖励                                      |
+| ------------ | :----------------------------------------- |
+| PR 成功合并   | 在 GitHub 鸣谢                              |
+| 累计 50 分    | 获得专属动态 **黑卡**                        |
+| 累计 150 分   | 升级为专属动态 **白金卡**，并置顶显示         |
+| 累计 500 分   | 目前还没想好，欢迎大家提Issue                 |
+
 
 - **反馈地址**：[Linux Do Wiki GitHub](https://github.com/Chenyme/Linux-Do-Wiki)，若 已达标/可升级/被遗漏，请及时私信[@chenyme🍊](https://linux.do/u/chenyme/summary)
 
@@ -57,13 +75,6 @@
 | 【新增】xxx 页面的 xxx 内容 | xxx 页面内需要新增的内容 + 理由 + 社区个人主页链接          |
 | 【改进】xxx 页面的 xxx 内容 | xxx 页面内需要改进的内容 + 理由 + 社区个人主页链接          |
 
-<br>
 
-### 💗 感谢我们的贡献者
 
-[![][github-contrib-shield]][github-contrib-link]
 
-<!-- LINK GROUP -->
-
-[github-contrib-link]: https://github.com/Chenyme/Linux-Do-Wiki/graphs/contributors
-[github-contrib-shield]: https://contrib.rocks/image?repo=Chenyme/Linux-Do-Wiki
