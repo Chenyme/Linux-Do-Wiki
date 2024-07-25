@@ -1,18 +1,18 @@
 <a name="readme-top"></a>
 
 <div align="center">
+  
+
 
 <img height="120" src="/public/linuxdo_logo_with_dark_text.png">
 
-<h1>Linux Do Wiki</h1>
-
-### Wiki For LINUX DO - [wiki.linux.do](wiki.linux.do)
+# Linux Do Wiki | [ wiki.linux.do](wiki.linux.do)
 
 </div>
 
 <br>
 
-### 💗 感谢我们的贡献者
+### 感谢我们的共建者💗
 
 [![][github-contrib-shield]][github-contrib-link]
 
@@ -23,17 +23,15 @@
 
 <br>
 
-### 共建榜相关说明
+### 共建榜相关说明🗒️
 
-为营造并鼓励共建环境，秉着**真诚、友善、团结、专业，共建你我引以为荣之社区的精神**。
+为营造并鼓励共建环境，秉着**真诚、友善、团结、专业，共建你我引以为荣之社区的精神**。现对所有社区热佬提交的 Issue/PR ，在成功采纳后 将依据 Wiki 站共建奖励制度，按照相应规则向各位共建者发放 **专属动态卡片** 或 其他奖励 以表示感谢！
 
-现对于 **建设性** 或 **重要** 的 Issue/PR，在成功采纳后 将在 Linux Do Wiki 站中标明，并发放 **专属动态卡片** 以表示感谢！
-
-分值明细公示：[Wiki 共建明细表](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink) **ISSUE / PR 成功后也请点击此处记录**
+- **反馈参与地址**：[Linux Do Wiki 官方 GitHub](https://github.com/Chenyme/Linux-Do-Wiki)，若 已达标/可升级/被遗漏，请及时私信 [@chenyme🍊](https://linux.do/u/chenyme/summary)
 
 <br>
 
-### 奖励分数表
+### 奖励分数表✨
 
 | 类型       | 事件内容                 | 分数  |
 | ---------- | ------------------------ |-------|
@@ -44,7 +42,9 @@
 
 <br>
 
-### 奖励制度
+### 奖励一览表🎓
+
+- **分值明细公示**：[Wiki 站共建反馈情况公示](https://zwho5v3j233.feishu.cn/base/UAGzbp3LQa5kpMsGnoicWgTvnLc?from=from_copylink)，请在 ISSUE/PR 成功采纳/合并后及时填写此表格！
 
 | 条件         | 奖励                                      |
 | ------------ | :----------------------------------------- |
@@ -53,14 +53,11 @@
 | 累计 150 分   | 升级为专属动态 **白金卡**，并置顶显示         |
 | 累计 500 分   | 目前还没想好，欢迎大家提Issue                 |
 
-
-- **反馈地址**：[Linux Do Wiki GitHub](https://github.com/Chenyme/Linux-Do-Wiki)，若 已达标/可升级/被遗漏，请及时私信[@chenyme🍊](https://linux.do/u/chenyme/summary)
-
 <br>
 
-### 反馈格式和说明
+### 反馈格式和说明🔗
 
-为了方便更好的管理和维护 Wiki 站，希望大家在提交 Issue/PR 时遵循一定的格式。
+为了方便更好的管理和维护 Wiki 站，在提交 Issue/PR 时请遵循一定的格式！
 
 - PR 时请遵循项目框架 Nextra 的编写规范
 - PR 在 Merge 后会在每晚定时更新
