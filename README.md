@@ -6,6 +6,8 @@
 
 <h1>Linux Do Wiki</h1>
 
+</div>
+
 ### Wiki For LINUX DO : [wiki.linux.do](wiki.linux.do)
 
 <br>
