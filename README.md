@@ -1,5 +1,10 @@
-# Linux-Do-Wiki
+<a name="readme-top"></a>
 
+<div align="center">
+
+<img height="120" src="/public/linuxdo.png">
+
+<h1>Linux Do Wiki</h1>
 
 ### Wiki For LINUX DO : [wiki.linux.do](wiki.linux.do)
 
@@ -16,21 +21,20 @@
 #### Issue
 
 - 成功采纳：获得 15 分
-- Issue标记为建设性、重要：获得 50 分
+- Issue 标记为建设性、重要：获得 50 分
 
 #### PR
 
 - 成功合并：获得 25 分
-- PR标记为建设性、重要：获得 75 分
-  
+- PR 标记为建设性、重要：获得 75 分
+
 #### 奖励
 
-分数累计大于 0 分：会在GitHub鸣谢。
+分数累计大于 0 分：会在 GitHub 鸣谢。
 分数累计达到 50 分：获得专属动态 **黑卡**。
 分数累计达到 150 分：升级为专属动态 **白金卡**，并置顶显示。
 
 - **反馈地址**：[Linux Do Wiki GitHub](https://github.com/Chenyme/Linux-Do-Wiki)，若 已达标/可升级/被遗漏，请及时私信[@chenyme🍊](https://linux.do/u/chenyme/summary)
-
 
 <br>
 
@@ -42,47 +46,22 @@
 - PR 在 Merge 后会在每晚定时更新
 - Issue/PR 提交时的格式和说明 ：
 
-
-| 标题 | Issue内容 |
-|------|:------:|
-| 【建议】xxx页面的xxx内容 | 想要建议的内容 + 理由 + 相关词条（可选） +  社区个人主页链接 |
-| 【错误】xxx页面的xxxBUG | 报告xxx页面内的BUG + 具体情况 + 社区个人主页链接 |
-| 【修复】xxx页面的xxxBUG | xxx页面内的 xxx BUG + 社区个人主页链接 |
-| 【更正】xxx页面的xxx内容 | xxx页面内需要更新的内容 + 社区个人主页链接 |
-| 【新增】xxx页面的xxx内容 | xxx页面内需要新增的内容 + 理由 + 社区个人主页链接 |
-| 【改进】xxx页面的xxx内容 | xxx页面内需要改进的内容 + 理由 + 社区个人主页链接 |
-
+| 标题                        |                         Issue 内容                          |
+| --------------------------- | :---------------------------------------------------------: |
+| 【建议】xxx 页面的 xxx 内容 | 想要建议的内容 + 理由 + 相关词条（可选） + 社区个人主页链接 |
+| 【错误】xxx 页面的 xxxBUG   |     报告 xxx 页面内的 BUG + 具体情况 + 社区个人主页链接     |
+| 【修复】xxx 页面的 xxxBUG   |           xxx 页面内的 xxx BUG + 社区个人主页链接           |
+| 【更正】xxx 页面的 xxx 内容 |         xxx 页面内需要更新的内容 + 社区个人主页链接         |
+| 【新增】xxx 页面的 xxx 内容 |     xxx 页面内需要新增的内容 + 理由 + 社区个人主页链接      |
+| 【改进】xxx 页面的 xxx 内容 |     xxx 页面内需要改进的内容 + 理由 + 社区个人主页链接      |
 
 <br>
 
-### 特别鸣谢
+### 💗 感谢我们的贡献者
 
-- 排名不分先后
+[![][github-contrib-shield]][github-contrib-link]
 
-- [@nr0728](https://github.com/nr0728)、[@Sitoi](https://github.com/Sitoi)
+<!-- LINK GROUP -->
 
-<br>
-
-### 维护日志
-
-维护人员：@chenyme
-
-#### 2024-07-24
-- 上线 Linux Do Wiki - 光荣榜
-- 新增 Linux Do 元宇宙 词条
-- 新增多个收录
-- 优化链接跳转
-
-
-#### 2024-07-23
-- 上线 Linux Do Wiki站
-- 修复多个页面错误
-
-#### 2024-07-22
-- 完成Wiki 基本内容，站点基本框架
-
-
-
-
-
-
+[github-contrib-link]: https://github.com/Chenyme/Linux-Do-Wiki/graphs/contributors
+[github-contrib-shield]: https://contrib.rocks/image?repo=Chenyme/Linux-Do-Wiki
