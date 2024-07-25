@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img height="120" src="/public/linuxdo.png">
+<img height="120" src="/public/linuxdo_logo_with_dark_text.png">
 
 <h1>Linux Do Wiki</h1>
 
