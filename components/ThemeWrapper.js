@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {useTheme} from "nextra-theme-docs";
+import DisableSsrWrapper from "./DisableSsrWrapper";
 
 const ThemeWrapper = ({ childrenInLightTheme, childrenInDarkTheme }) => {
     const { theme } = useTheme();
@@ -24,7 +25,9 @@ const ThemeWrapper = ({ childrenInLightTheme, childrenInDarkTheme }) => {
 
     return (
         <>
-            {children}
+            <DisableSsrWrapper>
+                {children}
+            </DisableSsrWrapper>
         </>
     );
 }
