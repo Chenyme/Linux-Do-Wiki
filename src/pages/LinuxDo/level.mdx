@@ -2,6 +2,7 @@ import { Callout } from 'nextra/components'
 import { Steps } from 'nextra/components'
 import Link from 'next/link'
 import Image from 'next/image'
+import styles from '../../../styles/ExtraStyle.module.css'
 
 ## 社区信任等级
 用户信任系统是 Discourse 的基石之一，Linux Do 社区也沿用了这样的设计。
@@ -14,7 +15,7 @@ import Image from 'next/image'
 
 这成了社区用户信任系统的起点。因此，Linux Do 也设置了五个用户信任等级。你当前的信任等级可以在你的用户页面上看到，而且你的仪表板上会展示社区内所有信任等级的摘要。
 
-<Steps>
+<Steps className={styles.stepsFromZero}>
 ### 新用户
 
 **信任等级0**。默认情况下，所有新用户开始时都是信任等级0，意味着信任尚未建立。这些是刚刚创建账户的访客，还在<Link href="https://blog.discourse.org/2013/03/the-universal-rules-of-civilized-discourse/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>学习社区规范和社区工作方式</Link>。新用户的能力出于安全考虑而受到限制——为了新用户和社区的安全。
