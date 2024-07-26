@@ -129,30 +129,19 @@ import styles from '../../components/honorBoard.module.css';
 
 - 此卡仅作纪念，不具备任何实际价值，无任何直接联系，无任何特别暗示，仅供娱乐！
 
-
-<table>
-  <tbody>
-    <tr>
-      <td style={{ padding: "20px" }}>
-        <Card
-          heading="Linux Do Wiki"
-          number="0000 0000 0000 0000"
-          date="07/24"
-          name="Linux Do Metaverse"
-          code="000"
-        />
-      </td>
-      <td style={{ padding: "20px" }}>
-        <GoldCard
-          heading="Linux Do Wiki"
-          number="0000 0000 0000 0000"
-          date="07/24"
-          name="Linux Do Metaverse"
-          code="000"
-        />
-      </td>
-      <td style={{ padding: "20px" }}>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<div className={styles.cardContainer}>
+    <Card
+        heading="Linux Do Wiki"
+        number="0000 0000 0000 0000"
+        date="07/24"
+        name="Linux Do Metaverse"
+        code="000"
+    />
+    <GoldCard
+        heading="Linux Do Wiki"
+        number="0000 0000 0000 0000"
+        date="07/24"
+        name="Linux Do Metaverse"
+        code="000"
+    />
+</div>
