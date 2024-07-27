@@ -1,8 +1,8 @@
 import { Callout } from 'nextra/components'
 import Image from 'next/image'
 import Link from 'next/link'
-import LinuxDoLogoWithThemes from "../../components/LinuxDoLogoWithThemes";
 import {useTheme} from "nextra-theme-docs";
+import ThemeWrapper from "../../components/ThemeWrapper";
 
 ## 欢迎来到 LINUX DO WIKI 站
 
@@ -18,5 +18,8 @@ Wiki 站并不是万能站，不可能完全收录所有信息，它仅作为社
 ---
 
 <br></br>
-<LinuxDoLogoWithThemes />
+<ThemeWrapper
+    childrenInLightTheme={<Image src='/linuxdo_logo_with_dark_text.png' width={220} height={100} alt="LinuxDo Logo"/>}
+    childrenInDarkTheme={<Image src='/linuxdo_logo_with_light_text.png' width={220} height={100} alt="LinuxDo Logo"/>}
+/>
 **真诚、友善、团结、专业**，共建你我引以为荣之社区!
