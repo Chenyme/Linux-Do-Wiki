@@ -1,14 +1,21 @@
 {
   "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "http-proxy-middleware": "^3.0.0",
     "next": "^14.2.5",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
     "start": "next start"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.12"
   }
 }
