@@ -28,6 +28,43 @@ import Link from 'next/link'
 
 ## 如何部署
 
+### docker-compose部署
+
+```
+version: '3'
+services:
+  fuclaude:
+    image: pengzhile/fuclaude
+    ports:
+      - "127.0.0.1:8181:8181"
+    environment:
+        # 时区（不需要改动）
+      - TZ=Asia/Shanghai
+        # 绑定的端口号（不需要改动）（改动需要把映射也一起改动）
+      - FUCLAUDE_BIND=0.0.0.0:8181
+        # 超时时间（不需要改动）
+      - FUCLAUDE_TIMEOUT=600
+        # 代理URL  socks5://username:password@ip:port （http也一样格式）
+      - FUCLAUDE_PROXY_URL=
+        # 是否执行真实的登出操作（true/false）（不需要改动）
+      - FUCLAUDE_REAL_LOGOUT=false
+        # 访问站点的密码（如果需要）
+      - FUCLAUDE_SITE_PASSWORD=
+        # Cookie加密的密钥（不需要改动）
+      - FUCLAUDE_COOKIE_SECRET=1234567890abcdefghijklmnopqrstuv
+        # 道德审查，使用OAI的基础URL
+      - FUCLAUDE_OPENAI_BASE_URL=https://api.openai.com/v1
+        # 道德审查，使用OAI的密钥
+      - FUCLAUDE_OPENAI_API_KEY=sk-xxx
+        # 启用或禁用内容审核、道德审查（true/false）
+      - FUCLAUDE_MODERATION_ENABLED=false
+        # 启用或禁用用户注册（true/false）
+      - FUCLAUDE_SIGNUP_ENABLED=false
+        # 显示或隐藏会话密钥（true/false）
+      - FUCLAUDE_SHOW_SESSION_KEY=false
+    restart: unless-stopped
+```
+
 ### 自行部署
 
 - <Link href="https://github.com/wozulong/fuclaude/releases" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>【Fuclaude 啥也不是】 - Github</Link> 查看最新版本的 Fuclaude。
