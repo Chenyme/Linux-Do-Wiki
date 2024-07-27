@@ -1,0 +1,3 @@
+.stepsFromZero{
+    counter-reset:step -1;
+}
