@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 3000
 
 # 启动应用
-CMD ["npm", "start"]
+CMD ["node", "server.js"]
