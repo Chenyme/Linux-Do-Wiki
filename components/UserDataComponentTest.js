@@ -22,8 +22,8 @@ const UserDataComponentTest = ({username}) => {
 
     const twoName = simplifiedUser.name + " @" + simplifiedUser.username;
     const avatar_template = simplifiedUser.avatar_template;
-    const avatar96Url = "https://images.weserv.nl/?url=" + "https://linux.do" + avatar_template.replace("/{size}/", "/96/");
-    const avatar288Url = "https://images.weserv.nl/?url=" + "https://linux.do" + avatar_template.replace("/{size}/", "/288/");
+    const avatar96Url = "/image/linuxdo" + avatar_template.replace("/{size}/", "/96/");
+    const avatar288Url = "/image/linuxdo" + avatar_template.replace("/{size}/", "/288/");
 
     return (
         <div>
