@@ -5,7 +5,8 @@ import ThemeWrapper from "./components/ThemeWrapper";
 export default {
   docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/blob/main',
   toc: {
-      backToTop: true
+    backToTop: true,
+    title: '本页目录'
   },
   chat: {
     link: 'https://shared.oaifree.com/',
@@ -27,10 +28,10 @@ export default {
     )
   },
   feedback: {
-      content: '有疑问？给我们反馈→',
+    content: '有疑问？给我们反馈→',
   },
   editLink: {
-      text: '在 GitHub 上编辑此页→',
+    text: '在 GitHub 上编辑此页→',
   },
   head: (
     <>
@@ -74,33 +75,45 @@ export default {
   },
   footer: {
     text: (
-    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '10px' }}>
-      <div style={{ textAlign: 'left' }}>
-        <span>
-          <b>Linux Do Wiki - {new Date().getFullYear()} Powered By
-          <a href="https://github.com/Chenyme/Linux-Do-Wiki" target="_blank" rel="noopener noreferrer">
-            Chenyme
-          </a>
-          </b>
-          <br />
-          <br />
-          <Link href="https://linux.do/">官网：<b>linux.do</b></Link> | <Link href="https://linuxdo.org/">备用：<b>linuxdo.org</b></Link>
-        </span>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', padding: '10px' }}>
+        <div style={{ textAlign: 'left' }}>
+          <span>
+            <b>Linux Do Wiki - {new Date().getFullYear()} Powered By
+              <a href="https://github.com/Chenyme/Linux-Do-Wiki" target="_blank" rel="noopener noreferrer">
+                Chenyme
+              </a>
+            </b>
+            <br />
+            <br />
+            <Link href="https://linux.do/">官网：<b>linux.do</b></Link> | <Link href="https://linuxdo.org/">备用：<b>linuxdo.org</b></Link>
+          </span>
+        </div>
+        <div style={{ textAlign: 'right' }}>
+          <ThemeWrapper
+            childrenInLightTheme={
+              <Image src='/linuxdo_logo_with_dark_text.png' width={200} height={80} alt="LinuxDo Logo" />
+            }
+            childrenInDarkTheme={
+              <Image src='/linuxdo_logo_with_light_text.png' width={200} height={80} alt="LinuxDo Logo" />
+            }
+          />
+        </div>
       </div>
-      <div style={{ textAlign: 'right' }}>
-        <ThemeWrapper
-          childrenInLightTheme={
-            <Image src='/linuxdo_logo_with_dark_text.png' width={200} height={80} alt="LinuxDo Logo" />
-          }
-          childrenInDarkTheme={
-            <Image src='/linuxdo_logo_with_light_text.png' width={200} height={80} alt="LinuxDo Logo" />
-          }
-        />
-      </div>
-    </div>
     )
   },
   search: {
     placeholder: '搜索文档...'
-  }
+  },
+  gitTimestamp: ({ timestamp }) => {
+    const date = new Date(timestamp);
+    const options = {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      // hour: '2-digit',
+      // minute: '2-digit',
+      // hour12: false
+    };
+    return `最后更新于 ${date.toLocaleDateString('zh-CN', options)}`;
+  },
 }
