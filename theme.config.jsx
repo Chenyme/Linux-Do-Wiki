@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import ThemeWrapper from "./components/ThemeWrapper";
+import ScrollToTop from './components/ScrollToTop';
 
 export default {
   docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/blob/main',
   toc: {
-    backToTop: true,
-    title: '本页目录'
+    backToTop: false,
+    title: '本页目录',
+    extraContent: <ScrollToTop />
   },
   chat: {
     link: 'https://shared.oaifree.com/',
