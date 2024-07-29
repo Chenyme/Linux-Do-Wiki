@@ -1,0 +1,23 @@
+import { Callout } from 'nextra/components'
+import Image from 'next/image'
+import Link from 'next/link'
+import {useTheme} from "nextra-theme-docs";
+import ThemeWrapper from "../../components/ThemeWrapper";
+import Card from "../../components/Card";
+import UserDataComponentTest from '../../components/UserDataComponentTest';
+
+## 测试页面
+
+<div>
+    名片的昵称与头像的简单示例，可以此为基础制作新名片。
+    <UserDataComponentTest username="neo"/>
+    <UserDataComponentTest username="chenyme"/>
+    <UserDataComponentTest username="wayease" />
+</div>
+
+<br></br>
+<ThemeWrapper
+    childrenInLightTheme={<Image src='/linuxdo_logo_with_dark_text.png' width={220} height={100} alt="LinuxDo Logo"/>}
+    childrenInDarkTheme={<Image src='/linuxdo_logo_with_light_text.png' width={220} height={100} alt="LinuxDo Logo"/>}
+/>
+**真诚、友善、团结、专业**，共建你我引以为荣之社区!

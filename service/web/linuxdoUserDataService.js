@@ -21,3 +21,17 @@ export async function retrieveUserSth(username, sth) {
     const user = await retrieveUserData(username);
     return eval(sth);
 };
+
+export async function retrieveSimplifiedUser(username) {
+    const user = await retrieveUserData(username);
+    const simplifiedUser = {
+        id: user.id,// fixed
+        username: user.username,// fixed
+        name: user.name,// nickname
+        avatar_template: user.avatar_template,// {size} can be 96 or 288
+        email: user.email,
+        trust_level: user.trust_level
+        // add more if you need
+    };
+    return simplifiedUser;
+};

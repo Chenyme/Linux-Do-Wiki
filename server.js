@@ -16,6 +16,18 @@ app.prepare().then(() => {
             '^/api/linuxdo': '',
         },
     }));
+    server.use('/image/linuxdo', createProxyMiddleware({
+        target: 'https://linux.do',
+        changeOrigin: true,
+        pathRewrite: {
+            '^/image/linuxdo': '',
+        },
+        headers: {
+            'Accept': 'image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8',
+            'Referer': 'https://linux.do'
+        }
+    }));
+
 
     server.all('*', (req, res) => {
         return handle(req, res);
