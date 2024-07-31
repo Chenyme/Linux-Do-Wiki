@@ -25,8 +25,12 @@ export async function retrieveUserSth(username, sth) {
 export async function retrieveSimplifiedUser(username) {
     const user = await retrieveUserData(username);
     const simplifiedUser = {
+        // if suspended
+        suspended: user.suspended_till !== undefined ? true : false,// true or false
+        suspendedTill: user.suspended_till,
         // if hidden
-        profileHidden: user.profile_hidden,// true or null
+        profileHidden: user.profile_hidden === null ? false : true,// true or false
+
         // can not be hidden
         id: user.id,// fixed
         username: user.username,// fixed
@@ -37,6 +41,7 @@ export async function retrieveSimplifiedUser(username) {
         email: user.email,
         trustLevel: user.trust_level,
         createdAt: user.created_at,
+        gamificationScore: user.gamification_score,
         // add more data if you need
     };
     return simplifiedUser;

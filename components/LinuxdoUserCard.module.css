@@ -77,10 +77,15 @@
 .name {
     position: absolute;
     font-size: 20px;
-    top: 15px;
+    top: 8px;
     right: 10px;
     font-weight: 550;
     color: #f0f0f0;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 240px;
+    text-align: right;
+    height: 60px;
 }
 
 .avatar {
@@ -105,6 +110,22 @@
             1px -1px 0 #aaaaaa;
 }
 
+.groupBack {
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-shadow:
+            1px 1px 0 #f0f0f0,
+            -1px -1px 0 #555555,
+            -1px 1px 0 #f0f0f0,
+            1px -1px 0 #555555;
+    transform: scaleX(-1);
+}
+
 .id {
     position: absolute;
     bottom: 20px;
@@ -119,12 +140,47 @@
             1px -1px 0 #aaaaaa;
 }
 
-.title {
+.idBack {
+    z-index: 2;
     position: absolute;
-    top: 70px;
-    right: 10px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-shadow:
+            1px 1px 0 #f0f0f0,
+            -1px -1px 0 #555555,
+            -1px 1px 0 #f0f0f0,
+            1px -1px 0 #555555;
+    transform: scaleX(-1);
+}
+
+.trustLevel {
+    position: absolute;
+    top: 65px;
+    right: 55px;
     font-weight: 550;
     color: #ffb003;
+    font-size: 20px;
+}
+
+.trustLevelName {
+    position: absolute;
+    top: 85px;
+    right: 50px;
+    font-weight: 550;
+    color: #ffb003;
+    font-size: 30px;
+}
+
+.title {
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    font-weight: 550;
+    color: #1c1c1e;
+    font-size: 20px;
 }
 
 .back {
@@ -149,25 +205,47 @@
     );
 }
 
-.mstrip {
-    z-index: 2;
-    position: absolute;
-    background-color: rgb(255, 255, 255);
-    width: 200px;
-    height: 20px;
-    top: 100px;
-    left: 20px;
-    border-radius: 2.5px;
-}
-
-.sstrip {
+.sstrip1 {
     z-index: 2;
     position: absolute;
     background-color: rgb(255, 255, 255);
     width: 80px;
     height: 20px;
     top: 100px;
-    left: 240px;
+    left: 20px;
+    border-radius: 2.5px;
+}
+
+.mstrip1 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 20px;
+    top: 100px;
+    left: 120px;
+    border-radius: 2.5px;
+}
+
+.sstrip2 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    height: 20px;
+    top: 130px;
+    left: 20px;
+    border-radius: 2.5px;
+}
+
+.mstrip2 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 20px;
+    top: 130px;
+    left: 120px;
     border-radius: 2.5px;
 }
 
@@ -176,4 +254,36 @@
     font-weight: bold;
     text-align: center;
     color: #1c1c1e;
+}
+
+.chip {
+    position: absolute;
+    top: 100px;
+    left: 6px;
+}
+
+.contactless {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+}
+
+.suspendedLock {
+    z-index: 4;
+    position: absolute;
+    background-color: #1c1c1e;
+    width: 360px;
+    height: 100px;
+    top: 60px;
+    background: repeating-linear-gradient(
+            45deg,
+            #303030,
+            #303030 10px,
+            #202020 10px,
+            #202020 20px
+    );
+    font-size: 30px;
+    font-weight: 1000;
+    color: red;
+    text-align: center;
 }
