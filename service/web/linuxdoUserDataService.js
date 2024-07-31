@@ -25,13 +25,24 @@ export async function retrieveUserSth(username, sth) {
 export async function retrieveSimplifiedUser(username) {
     const user = await retrieveUserData(username);
     const simplifiedUser = {
+        // if suspended
+        suspended: user.suspended_till !== undefined ? true : false,// true or false
+        suspendedTill: user.suspended_till,
+        // if hidden
+        profileHidden: user.profile_hidden !== undefined ? true : false,// true or false
+
+        // can not be hidden
         id: user.id,// fixed
         username: user.username,// fixed
         name: user.name,// nickname
-        avatar_template: user.avatar_template,// {size} can be 96 or 288
+        avatarTemplate: user.avatar_template,// {size} can be 96 or 288
+        title: user.title,
+        // can be hidden
         email: user.email,
-        trust_level: user.trust_level
-        // add more if you need
+        trustLevel: user.trust_level,
+        createdAt: user.created_at,
+        gamificationScore: user.gamification_score,
+        // add more data if you need
     };
     return simplifiedUser;
 };

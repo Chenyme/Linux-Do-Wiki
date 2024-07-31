@@ -1,0 +1,289 @@
+.flipCard {
+    width: 360px;
+    height: 240px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    background-color: transparent;
+    perspective: 800px;
+}
+
+.flipCardInner {
+    width: 98%;
+    height: 97%;
+    padding: 1%;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 3px 0 rgb(0, 0, 0, 0.5);
+    border-radius: 1rem;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInner {
+    transform: rotateY(540deg);
+}
+
+.flipCardFront, .flipCardBack {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 98%;
+    height: 97%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.flipCardBack {
+    transform: rotateY(540deg);
+}
+
+.top, .mid, .bot {
+    z-index: 1;
+}
+
+.top {
+    top: 0%;
+    height: 30%;
+    background-color: #1c1c1e;
+}
+
+.mid {
+    top: 30%;
+    height: 40%;
+    background-color: #f0f0f0;
+}
+
+.bot {
+    top: 70%;
+    height: 30%;
+    background-color: #ffb003;
+}
+
+.content {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: transparent;
+}
+
+.name {
+    position: absolute;
+    font-size: 20px;
+    top: 8px;
+    right: 10px;
+    font-weight: 550;
+    color: #f0f0f0;
+    word-wrap: break-word;
+    overflow: hidden;
+    width: 240px;
+    text-align: right;
+    height: 60px;
+}
+
+.avatar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    stroke: #ffb003;
+    stroke-width: 5;
+}
+
+.group {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f0f0f0;
+    text-shadow:
+            1px 1px 0 #aaaaaa,
+            -1px -1px 0 #f0f0f0,
+            -1px 1px 0 #aaaaaa,
+            1px -1px 0 #aaaaaa;
+}
+
+.groupBack {
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-shadow:
+            1px 1px 0 #f0f0f0,
+            -1px -1px 0 #555555,
+            -1px 1px 0 #f0f0f0,
+            1px -1px 0 #555555;
+    transform: scaleX(-1);
+}
+
+.id {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #f0f0f0;
+    text-shadow:
+            1px 1px 0 #aaaaaa,
+            -1px -1px 0 #f0f0f0,
+            -1px 1px 0 #aaaaaa,
+            1px -1px 0 #aaaaaa;
+}
+
+.idBack {
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-shadow:
+            1px 1px 0 #f0f0f0,
+            -1px -1px 0 #555555,
+            -1px 1px 0 #f0f0f0,
+            1px -1px 0 #555555;
+    transform: scaleX(-1);
+}
+
+.trustLevel {
+    position: absolute;
+    top: 65px;
+    right: 55px;
+    font-weight: 550;
+    color: #ffb003;
+    font-size: 20px;
+}
+
+.trustLevelName {
+    position: absolute;
+    top: 85px;
+    right: 50px;
+    font-weight: 550;
+    color: #ffb003;
+    font-size: 30px;
+}
+
+.title {
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    font-weight: 550;
+    color: #1c1c1e;
+    font-size: 20px;
+}
+
+.back {
+    z-index: 1;
+    height: 100%;
+    background-color: #ffb003;
+}
+
+.strip {
+    z-index: 2;
+    position: absolute;
+    background-color: #1c1c1e;
+    width: 360px;
+    height: 40px;
+    top: 50px;
+    background: repeating-linear-gradient(
+            45deg,
+            #303030,
+            #303030 10px,
+            #202020 10px,
+            #202020 20px
+    );
+}
+
+.sstrip1 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    height: 20px;
+    top: 100px;
+    left: 20px;
+    border-radius: 2.5px;
+}
+
+.mstrip1 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 20px;
+    top: 100px;
+    left: 120px;
+    border-radius: 2.5px;
+}
+
+.sstrip2 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 80px;
+    height: 20px;
+    top: 130px;
+    left: 20px;
+    border-radius: 2.5px;
+}
+
+.mstrip2 {
+    z-index: 2;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 200px;
+    height: 20px;
+    top: 130px;
+    left: 120px;
+    border-radius: 2.5px;
+}
+
+.code {
+    z-index: 3;
+    font-weight: bold;
+    text-align: center;
+    color: #1c1c1e;
+}
+
+.chip {
+    position: absolute;
+    top: 100px;
+    left: 6px;
+}
+
+.contactless {
+    position: absolute;
+    top: 90px;
+    right: 0px;
+}
+
+.suspendedLock {
+    z-index: 4;
+    position: absolute;
+    background-color: #1c1c1e;
+    width: 360px;
+    height: 100px;
+    top: 60px;
+    background: repeating-linear-gradient(
+            45deg,
+            #303030,
+            #303030 10px,
+            #202020 10px,
+            #202020 20px
+    );
+    font-size: 30px;
+    font-weight: 1000;
+    color: red;
+    text-align: center;
+}

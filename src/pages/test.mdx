@@ -5,14 +5,52 @@ import {useTheme} from "nextra-theme-docs";
 import ThemeWrapper from "../../components/ThemeWrapper";
 import Card from "../../components/Card";
 import UserDataComponentTest from '../../components/UserDataComponentTest';
+import LinuxdoUserCard from "../../components/LinuxdoUserCard";
+import GoldCard from "../../components/GoldCard";
 
 ## 测试页面
 
+<Callout>注意：此页面应于分支开发结束后撤销！</Callout>
+
 <div>
-    名片的昵称与头像的简单示例，可以此为基础制作新名片。
-    <UserDataComponentTest username="neo"/>
-    <UserDataComponentTest username="chenyme"/>
-    <UserDataComponentTest username="wayease" />
+    Linux Do 用户一人一个的新名片！
+
+    始皇实例：（伟大，无需多言）
+    <LinuxdoUserCard linuxdoUsername="neo"/>
+    <br/><br/>
+
+    WIKI站运营大佬实例：（大佬牛逼）
+    <LinuxdoUserCard linuxdoUsername="chenyme"/>
+    <br/><br/>
+
+    透明头像实例：（我是废物）
+    <LinuxdoUserCard linuxdoUsername="wayease"/>
+    <br/><br/>
+
+    隐藏公开信息实例：（看不到就看不到呗）（7.31：始皇为了找内鬼把隐藏信息禁用了，现在所有人的都公开了）
+    <LinuxdoUserCard linuxdoUsername="user3"/>
+    <br/><br/>
+
+    name特别长实例：（太长就折行，再长就真没办法了，隐藏掉多余的）
+    <LinuxdoUserCard linuxdoUsername="linux5"/>
+    <br/><br/>
+
+    title特别长实例：（笑死，能有多长？）
+    <LinuxdoUserCard linuxdoUsername="musifei"/>
+    <br/><br/>
+
+    name不写为空字符串“”实例：（替换username->name）
+    <LinuxdoUserCard linuxdoUsername="king-huiwen-of-qin"/>
+    <br/><br/>
+
+    根本就他妈没有这个人或者加载中实例：（假装一直加载）
+    <LinuxdoUserCard linuxdoUsername="ajygfdsfjmsygfaskjyg"/>
+    <br/><br/>
+
+    傻逼内鬼实例：（区别对待）
+    <LinuxdoUserCard linuxdoUsername="archive"/>
+    <br/><br/>
+
 </div>
 
 <br></br>
