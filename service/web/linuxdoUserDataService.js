@@ -29,7 +29,7 @@ export async function retrieveSimplifiedUser(username) {
         suspended: user.suspended_till !== undefined ? true : false,// true or false
         suspendedTill: user.suspended_till,
         // if hidden
-        profileHidden: user.profile_hidden === null ? false : true,// true or false
+        profileHidden: user.profile_hidden !== undefined ? true : false,// true or false
 
         // can not be hidden
         id: user.id,// fixed
