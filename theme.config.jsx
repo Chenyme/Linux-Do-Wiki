@@ -93,7 +93,13 @@ export default {
     )
   },
   search: {
-    placeholder: '搜索文档...'
+    placeholder: '搜索文档...',
+    error: '哎呀出错啦，请稍后重试！',
+    emptyResult: <>
+      <span class="nx-block nx-select-none nx-p-8 nx-text-center nx-text-sm nx-text-gray-400">
+      未找到相关内容，请尝试其他关键词
+      </span>
+    </>
   },
   sidebar: {
     defaultMenuCollapseLevel: 2,
