@@ -4,9 +4,9 @@
   
 
 
-<img height="120" src="/public/linuxdo_logo_with_dark_text.png">
+<img height="70" src="/public/linuxdo_logo_with_dark_text.png">
 
-# Linux Do Wiki | [ wiki.linux.do](wiki.linux.do)
+## Linux Do Wiki | [ wiki.linux.do](wiki.linux.do)
 
 </div>
 
@@ -18,8 +18,28 @@
 
 <!-- LINK GROUP -->
 
-[github-contrib-link]: https://github.com/Chenyme/Linux-Do-Wiki/graphs/contributors
 [github-contrib-shield]: https://contrib.rocks/image?repo=Chenyme/Linux-Do-Wiki
+[github-contrib-link]: https://github.com/Chenyme/Linux-Do-Wiki/graphs/contributors
+
+
+<br>
+
+### 反馈格式和说明🔗
+
+为了方便更好的管理和维护 Wiki 站，在提交 Issue/PR 时请遵循一定的格式！
+
+- PR 时请遵循项目框架 Nextra 的编写规范
+- PR 在 Merge 后会在每晚定时更新
+- Issue/PR 提交时的格式和说明 ：
+
+| 标题                        | Issue 内容                                                  |
+| --------------------------- | :---------------------------------------------------------- |
+| 【建议】xxx 页面的 xxx 内容 | 想要建议的内容 + 理由 + 相关词条（可选） + 社区个人主页链接 |
+| 【错误】xxx 页面的 xxx BUG  | 报告 xxx 页面内的 BUG + 具体情况 + 社区个人主页链接         |
+| 【修复】xxx 页面的 xxx BUG  | xxx 页面内的 xxx BUG + 社区个人主页链接                     |
+| 【更正】xxx 页面的 xxx 内容 | xxx 页面内需要更新的内容 + 社区个人主页链接                 |
+| 【新增】xxx 页面的 xxx 内容 | xxx 页面内需要新增的内容 + 理由 + 社区个人主页链接          |
+| 【改进】xxx 页面的 xxx 内容 | xxx 页面内需要改进的内容 + 理由 + 社区个人主页链接          |
 
 <br>
 
@@ -54,23 +74,6 @@
 | 累计 500 分   | 目前还没想好，欢迎大家提Issue                 |
 
 <br>
-
-### 反馈格式和说明🔗
-
-为了方便更好的管理和维护 Wiki 站，在提交 Issue/PR 时请遵循一定的格式！
-
-- PR 时请遵循项目框架 Nextra 的编写规范
-- PR 在 Merge 后会在每晚定时更新
-- Issue/PR 提交时的格式和说明 ：
-
-| 标题                        | Issue 内容                                                  |
-| --------------------------- | :---------------------------------------------------------- |
-| 【建议】xxx 页面的 xxx 内容 | 想要建议的内容 + 理由 + 相关词条（可选） + 社区个人主页链接 |
-| 【错误】xxx 页面的 xxx BUG  | 报告 xxx 页面内的 BUG + 具体情况 + 社区个人主页链接         |
-| 【修复】xxx 页面的 xxx BUG  | xxx 页面内的 xxx BUG + 社区个人主页链接                     |
-| 【更正】xxx 页面的 xxx 内容 | xxx 页面内需要更新的内容 + 社区个人主页链接                 |
-| 【新增】xxx 页面的 xxx 内容 | xxx 页面内需要新增的内容 + 理由 + 社区个人主页链接          |
-| 【改进】xxx 页面的 xxx 内容 | xxx 页面内需要改进的内容 + 理由 + 社区个人主页链接          |
 
 
 
