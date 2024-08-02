@@ -43,6 +43,11 @@
   transform: rotateY(180deg);
 }
 
+@font-face {
+    font-family: 'Farrington 7B';
+    src: url('../public/Farrington-7B.ttf') format('truetype');
+}
+
 .heading {
   position: absolute;
   font-size: 0.9em;
@@ -56,27 +61,30 @@
 .logo {
   position: absolute;
   top: 6.8em;
-  right: 1em;
+  right: 1.2em;
 }
 
 .chip {
   position: absolute;
-  top: 2.3em;
+  weight: 50px;
+  height: 50px;
+  top: 1em;
   left: 1em;
 }
 
 .contactless {
   position: absolute;
-  top: 3.5em;
-  left: 12.4em;
+  top: 4em;
+  left: 12.2em;
 }
 
 .number {
   position: absolute;
-  font-weight: bold;
-  font-size: .6em;
-  top: 8.3em;
-  left: 1.6em;
+  font-size: .5em;
+  font-family: 'Farrington 7B';
+  letter-spacing: 1px;
+  top: 9em;
+  left: 2.2em;
 }
 
 .validThru {
@@ -89,18 +97,20 @@
 
 .date {
   position: absolute;
-  font-weight: bold;
   font-size: 0.5em;
-  top: 13.1em;
-  left: 2em;
+  font-family: 'Farrington 7B';
+  letter-spacing: 1px;
+  top: 12.2em;
+  left: 2.2em;
 }
 
 .name {
   position: absolute;
   font-weight: bold;
-  font-size: 0.5em;
-  top: 16.1em;
-  left: 2em;
+  font-family: 'Arial';
+  font-size: 0.6em;
+  top: 12.8em;
+  left: 1.8em;
 }
 
 .strip {
@@ -141,6 +151,8 @@
 .code {
   font-weight: bold;
   text-align: center;
-  margin: -0.31em;
+  font-family: 'Farrington 7B';
+  font-size: 0.66em;
+  margin: -1.4px;
   color: black;
 }

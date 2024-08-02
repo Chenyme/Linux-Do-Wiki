@@ -1,14 +1,26 @@
 import Head from 'next/head';
 import Link from 'next/link'
 import Image from 'next/image';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../../components/Login.module.css';
 import Loading from '../../components/loginloading.module.css';
 import ThemeWrapper from "../../components/ThemeWrapper";
-import { useEffect } from 'react';
+
 
 
 export default function Login() {
+
+    useEffect(() => {
+    // 禁用滚动条
+    document.body.style.overflow = 'hidden';
+
+    // 清理函数以恢复滚动条
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+    }, []);
+
     const router = useRouter();
 
     const handleLogin = () => {
@@ -16,7 +28,7 @@ export default function Login() {
     };
 
     useEffect(() => {
-        document.body.style.margin = 0; // 去除body的默认margin
+        document.body.style.margin = 0;
       }, []);
 
     return (

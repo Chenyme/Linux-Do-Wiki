@@ -1,4 +1,3 @@
-/* Overall container styling */
 .container {
     display: flex;
     align-items: center;
@@ -47,7 +46,7 @@
 
   @keyframes Rotate {
     50% {
-      
+
       transform: rotate(180deg);
     }
     100% {

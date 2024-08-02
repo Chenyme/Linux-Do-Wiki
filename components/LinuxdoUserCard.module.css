@@ -2,30 +2,33 @@
     width: 300px;
     height: 200px;
     position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
-    justify-items: center;
-    align-content: center;
     background-color: transparent;
     perspective: 800px;
+    -webkit-perspective: 800px;
 }
 
 .flipCardInner {
+    position: relative;
     width: 100%;
     height: 100%;
-    padding: 0%;
     background-color: #f0f0f0;
-    box-shadow: 0 2px 3px 0 rgb(0, 0, 0, 0.5);
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.5);
     border-radius: 1rem;
-    transition: transform 1.5s;
+    transition: transform 0.8s;
     transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
 }
 
 .flipCard:hover .flipCardInner {
-    transform: rotateY(540deg);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 .flipCardFront, .flipCardBack {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -36,12 +39,15 @@
     backface-visibility: hidden;
     border-radius: 1rem;
     overflow: hidden;
-    background-color: transparent;
+    background-color: #ffffff;
+    -webkit-transform-style: preserve-3d;
 }
 
 .flipCardBack {
-    transform: rotateY(540deg);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
+
 
 .top, .mid, .bot {
     z-index: 1;
@@ -78,7 +84,7 @@
     position: absolute;
     font-size: 16.5px;
     top: 5px;
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
     right: 10px;
     font-weight: 550;
     color: #f0f0f0;
@@ -111,69 +117,73 @@
 
 .group {
     position: absolute;
-    bottom: 18px;
-    left: 20px;
+    bottom: 14px;
+    left: 15px;
     letter-spacing: -1.9px;
     font-family: 'Arial';
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     color: #f0f0f0;
     text-shadow:
-        1px 1px 0 #aaaaaa,
-        -1px -1px 0 #f0f0f0,
-        -1px 1px 0 #aaaaaa,
-        1px -1px 0 #aaaaaa;
+        0.5px 0.5px 0 #aaaaaa,
+        -0.5px -0.5px 0 #f0f0f0,
+        -0.5px 0.5px 0 #aaaaaa,
+        0.5px -0.5px 0 #aaaaaa;
 }
 
 .groupBack {
     z-index: 2;
     position: absolute;
-    bottom: 18px;
-    right: 20px;
+    bottom: 14px;
+    right: 15px;
     letter-spacing: -1.9px;
     font-family: 'Arial';
-    margin: 0;
-    letter-spacing: -1.1px;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     color: #aaaaaa;
     text-shadow:
-            1px 1px 0 #f0f0f0,
-            -1px -1px 0 #555555,
-            -1px 1px 0 #f0f0f0,
-            1px -1px 0 #555555;
+        1px 1px 0 #f0f0f0,
+        -1px -1px 0 #555555,
+        -1px 1px 0 #f0f0f0,
+        1px -1px 0 #555555;
     transform: scaleX(-1);
+}
+
+@font-face {
+    font-family: 'Farrington 7B';
+    src: url('../public/Farrington-7B.ttf') format('truetype');
 }
 
 .id {
     position: absolute;
     bottom: 18px;
-    right: 18px;
-    font-family: 'Arial';
-    font-size: 15px;
-    font-weight: 500;
+    right: 10px;
+    font-family: 'Farrington 7B';
+    font-size: 12px;
     color: #f0f0f0;
+    letter-spacing: 1.4px;
     text-shadow:
-            1px 1px 0 #aaaaaa,
-            -1px -1px 0 #f0f0f0,
-            -1px 1px 0 #aaaaaa,
-            1px -1px 0 #aaaaaa;
+        0.5px 0.5px 0 #aaaaaa,
+        -0.5px -0.5px 0 #f0f0f0,
+        -0.5px 0.5px 0 #aaaaaa,
+        0.5px -0.5px 0 #aaaaaa;
 }
 
 .idBack {
     z-index: 2;
     position: absolute;
     bottom: 18px;
-    left: 18px;
-    font-family: 'Arial';
-    font-size: 15px;
+    left: 10px;
+    font-family: 'Farrington 7B';
+    font-size: 12px;
     font-weight: 500;
+    letter-spacing: 1.4px;
     color: #aaaaaa;
     text-shadow:
-            1px 1px 0 #f0f0f0,
-            -1px -1px 0 #555555,
-            -1px 1px 0 #f0f0f0,
-            1px -1px 0 #555555;
+        1px 1px 0 #f0f0f0,
+        -1px -1px 0 #555555,
+        -1px 1px 0 #f0f0f0,
+        1px -1px 0 #555555;
     transform: scaleX(-1);
 }
 
@@ -181,7 +191,8 @@
     position: absolute;
     top: 68px;
     left: 165px;
-    font-weight: 550;
+    font-family: 'Arial';
+    font-weight: bold;
     color: #ffb003;
     font-size: 20px;
 }
@@ -190,7 +201,8 @@
     position: absolute;
     top: 92px;
     left: 165px;
-    font-weight: 550;
+    font-family: 'Arial';
+    font-weight: bold;
     color: #ffb003;
     font-size: 30px;
 }
@@ -199,6 +211,7 @@
     position: absolute;
     top: 33px;
     right: 8px;
+    font-family: 'Arial';
     font-weight: 550;
     color: #FF7043;
     font-size: 12px;
@@ -272,10 +285,10 @@
 
 .code {
     z-index: 3;
-    font-weight: bold;
+    font-weight: 550;
     text-align: center;
-    font-family: 'Arial';
-    font-size: 15px;
+    font-family: 'Farrington 7B', sans-serif;
+    font-size: 14px;
     color: #1c1c1e;
 }
 

@@ -1,10 +1,11 @@
-import { useEffect, useState } from 'react';
 import Cookie from 'js-cookie';
+import { useEffect, useState } from 'react';
+import { Callout } from 'nextra/components'
 import LinuxdoUserCard from '../../components/LinuxdoUserCard';
 import loading from '../../components/loadingcard.module.css';
-import * as linuxdoUserDataSummaryService from "../../service/web/linuxdoUserDataSummaryService";
 import styles from '../../components/UserProfile.module.css';
-import { Callout } from 'nextra/components'
+import * as linuxdoUserDataSummaryService from "../../service/web/linuxdoUserDataSummaryService";
+
 
 export default function Home() {
     const [user, setUser] = useState(null);
@@ -45,13 +46,19 @@ export default function Home() {
     }
 
     return (
-        <div>↑ 上方返回文档 | <button onClick={() => Cookie.remove('user')}>点此退出登录</button>
+        <div>↑ 上方返回文档 |
+            <button onClick={() => {
+                Cookie.remove('user');
+                window.location.href = 'https://wiki.linux.do/login';
+            }}>
+                点此退出登录
+            </button>
         <div className={styles.container}>
             <div className={styles.flexContainer}>
                 <LinuxdoUserCard linuxdoUsername={user.username} />
                 {userSummary && (
                     <div className={styles.summary}>
-                        <h2>{user.name} | 社区数据</h2>
+                        <infoTitle>{user.name} | 社区数据</infoTitle>
                         <div className={styles.info}>
                             <p><strong>点赞数:</strong> {userSummary.likesGiven}</p>
                             <p><strong>收获点赞数:</strong> {userSummary.likesReceived}</p>
