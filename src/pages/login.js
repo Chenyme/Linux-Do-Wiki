@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import styles from '../../components/Login.module.css';
 import Loading from '../../components/loginloading.module.css';
 import ThemeWrapper from "../../components/ThemeWrapper";
+import { useEffect } from 'react';
 
 
 export default function Login() {
@@ -14,6 +15,10 @@ export default function Login() {
         router.push('/api/auth/initiate');
     };
 
+    useEffect(() => {
+        document.body.style.margin = 0; // 去除body的默认margin
+      }, []);
+
     return (
         <div className={styles.container}>
              <Head>
@@ -21,7 +26,7 @@ export default function Login() {
                 <link rel="icon" href="/logo.png" />
             </Head>
             <div className={styles.card}>
-                <Image src='/linuxdo_logo_with_light_text.png' width={180} height={60} alt="LinuxDo Logo" />
+                <Image src='/linuxdo_logo_with_light_text.png' width={180} height={60} alt="LinuxDo Logo" style={{filter: 'drop-shadow(2px 2px 2px rgba(27, 26, 30,0.4))'}} />
                 <h1 className={styles.title}>Verify With Linux Do</h1>
                 <p className={styles.description}>为保护社区用户权益，请验证后访问 Wiki 文档！</p>
                 <br></br>

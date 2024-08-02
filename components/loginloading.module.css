@@ -12,7 +12,7 @@
   margin-right: 10px;
   border-radius: 10px;
   background-color: #b3d4fc;
-  animation: pulse 1.5s infinite ease-in-out;
+  animation: pulse 2.5s infinite ease-in-out;
 }
 
 .dot:last-child {
@@ -20,15 +20,23 @@
 }
 
 .dot:nth-child(1) {
-  animation-delay: -0.3s;
+  animation-delay: -0.4s;
 }
 
 .dot:nth-child(2) {
-  animation-delay: -0.1s;
+  animation-delay: -0.3s;
 }
 
 .dot:nth-child(3) {
-  animation-delay: 0.1s;
+  animation-delay: -0.2s;
+}
+
+.dot:nth-child(4) {
+  animation-delay: -0.1s;
+}
+
+.dot:nth-child(5) {
+  animation-delay: 0s;
 }
 
 @keyframes pulse {

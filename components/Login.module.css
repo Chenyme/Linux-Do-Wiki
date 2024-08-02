@@ -4,52 +4,72 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: hidden;
-    position: relative;
+    background: linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
+    background-size: 150% 150%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 20px;
+    position: relative;
     box-sizing: border-box;
+    user-select: none;
+    animation: gradient 40s ease infinite alternate;
 }
 
-/* Background animation */
-.container::before {
+.container::before,
+.container::after {
     content: '';
+    width: 150%;
+    aspect-ratio: 1;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 70%);
-    transform: translate(-50%, -50%);
-    animation: rotate 10s infinite linear;
-    opacity: 0.6;
-    z-index: 0;
+    top: 95%;
+    left: 0%;
+    background-color:rgba(255,255,255,0.1);
+    border-radius: 45% 42% 46% 48%;
+    z-index: 1;
+    animation: Rotate 18s linear infinite;
 }
 
-@keyframes rotate {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+.container::after{
+    left: -50%;
+    border-radius: 48% 44% 43% 45%;
+    background-color:rgba(255,255,255,0.2);
+    animation-duration: 15s;
 }
+
+@keyframes gradient {
+    0%,100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  @keyframes Rotate {
+    50% {
+      
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 
 /* Card styling to create a glassmorphism effect */
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
     padding: 2rem 3rem;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(15px);
     border: 1px solid rgba(255, 255, 255, 0.18);
     animation: fadeIn 1.5s ease-in-out;
     z-index: 1;
     text-align: center;
+    backdrop-filter: blur(5px);
 }
 
 /* Title styling */
@@ -57,16 +77,18 @@
     font-size: 2.5rem;
     color: #ffffff;
     margin: 2rem 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     font-weight: bold;
     animation: slideIn 1s ease-in-out;
 }
 
 .description {
     font-size: 1.1rem;
-    color: black;
+    color: #444;
     margin: 0px;
+    font-weight: bold;
     animation: slideIn 1s ease-in-out;
+    word-wrap: break-word;
 }
 
 
