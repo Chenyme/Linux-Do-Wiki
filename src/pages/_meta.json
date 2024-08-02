@@ -56,13 +56,27 @@
     "type": "page",
     "href": "https://wiki.linux.do/honor"
   },
+  "user": {
+    "theme": {
+      "breadcrumb": false,
+      "footer": true,
+      "sidebar": false,
+      "toc": false,
+      "pagination": false,
+      "layout": "full"
+    },
+    "display": "hidden"
+  },
   "index": "Wiki 使用说明",
-  "honor": "wiki 共建荣誉榜",
-  "LinuxDo": "Linux Do",
-  "Oaifree": "Oaifree",
-  "Chat2API": "Chat2API",
-  "Fuclaude": "Fuclaude",
-  "DeepLX": "DeepLX",
-  "HttpRW": "HttpRW",
+  "honor": "Wiki 共建荣誉榜",
+    "---------": {
+    "type": "separator"
+  },
+  "LinuxDo": "LinuxDo 社区",
+  "Oaifree": "Oaifree 服务",
+  "Chat2API": "Chat2API 服务",
+  "Fuclaude": "Fuclaude 服务",
+  "DeepLX": "DeepLX 服务",
+  "HttpRW": "HttpRW 服务",
   "history": "Wiki 更新记录"
 }

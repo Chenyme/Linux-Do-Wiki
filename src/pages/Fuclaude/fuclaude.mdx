@@ -4,15 +4,17 @@ import Link from 'next/link'
 
 ## 新玩具 Fuclaude
 
-原定的域名被抢注，已改名 fuclaude 始皇称之为 法克劳德。类比 Oaifree，它就是Claude的镜像站点，支持 Oauth 登录，跟 Oaifree 用法相似，避免直接泄露 Token。
+原定的域名被抢注，因此改名为 Fuclaude 始皇称之为 法克劳德。类比上一节所提的 Oaifree 镜像，就不难理解 Fuclaude 镜像是 Claude 的镜像站点了。目前镜像支持 Oauth 登录，这也跟 Oaifree 用法相似，避免直接泄露 Token，同样支持会话隔离、过期时间等诸多功能。
 
-测试站点：
+官方测试站点：
 
 - <Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>demo.fuclaude.com</Link>
 
 ## 功能说明
 
-- 支持FreeBSD 系统（Serv00）部署。
+- 支持 FreeBSD 系统（Serv00）部署。
+
+- 支持 全流程代理，接码、注册均已搞定（注册需要国外手机号）。
 
 - 支持 Oauth 登录，跟 Oaifree 用法相似，避免直接泄露 Token。
 
@@ -22,13 +24,13 @@ import Link from 'next/link'
 
 - 支持 sessionKey 获取，接口 /api/auth/session。
 
-- 支持配置站点密码，原生保护你的镜像站点
+- 支持配置站点密码，原生保护你的镜像站点。
 
-- 支持配置过期时间 expire
+- 支持配置过期时间 expire。
 
 ## 如何部署
 
-### 自行部署
+### 自行下载部署
 
 - <Link href="https://github.com/wozulong/fuclaude/releases" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>【Fuclaude 啥也不是】 - Github</Link> 查看最新版本的 Fuclaude。
 
@@ -69,7 +71,7 @@ services:
     restart: unless-stopped
 ```
 
-### 热佬教程
+### 阅读热佬教程 部署
 
 |<div style={{ width: '150px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>平台</div>| <div style={{ width: '370px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>帖子</div> | <div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>作者</div> |
 |------|------|:------:|
@@ -175,3 +177,4 @@ fetch(url, {
 - <Link href="https://linux.do/t/topic/134197" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>小玩具也能有炸裂功能</Link>
 - <Link href="https://linux.do/t/topic/155769" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>你们新注册的Claude账号还好吗？</Link>
 - <Link href="https://linux.do/t/topic/135785" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>建立一个 Fuclaude Shared Chat 的第二步</Link>
+- <Link href="https://linux.do/t/topic/162623" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Fuclaude Helper 什么时候能出来呢？</Link>

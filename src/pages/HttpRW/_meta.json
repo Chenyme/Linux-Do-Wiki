@@ -1,3 +1,5 @@
 {
-  "httprw": "HTTP RW"
+  "httprw": "HTTP 测试接口",
+  "apihttprw": "测试和调试 API",
+  "tlshttprw": "指纹信息追踪"
 }
