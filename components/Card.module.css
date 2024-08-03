@@ -4,6 +4,7 @@
   height: 154px;
   perspective: 1000px;
   color: white;
+  place-self: center;
 }
 
 .flipCardInner {
