@@ -25,32 +25,6 @@
       }
     }
   },
-  "相关服务": {
-    "title": "相关服务",
-    "type": "menu",
-    "items": {
-      "Oaifree": {
-        "title": "Oaifree",
-        "href": "https://shared.oaifree.com/"
-      },
-      "Fuclaude": {
-        "title": "Fuclaude",
-        "href": "https://demo.fuclaude.com/"
-      },
-      "DeepLX": {
-        "title": "DeepLX",
-        "href": "https://connect.linux.do/"
-      },
-      "Chat2API": {
-        "title": "Chat2API",
-        "href": "https://api.oaipro.com/"
-      },
-      "应用接入": {
-        "title": "应用接入",
-        "href": "https://connect.linux.do/dash/sso"
-      }
-    }
-  },
   "honer": {
     "title": "共建荣誉榜",
     "type": "page",
@@ -67,16 +41,30 @@
     },
     "display": "hidden"
   },
-  "index": "Wiki 使用说明",
-  "honor": "Wiki 共建荣誉榜",
-    "---------": {
+  "index": "欢迎",
+  "announcement":  {
+    "title": "公告",
+    "display": "hidden"
+  },
+  "honor": "共建荣誉榜",
+  "---1": {
     "type": "separator"
   },
-  "LinuxDo": "LinuxDo 社区",
-  "Oaifree": "Oaifree 服务",
-  "Chat2API": "Chat2API 服务",
-  "Fuclaude": "Fuclaude 服务",
-  "DeepLX": "DeepLX 服务",
-  "HttpRW": "HttpRW 服务",
-  "history": "Wiki 更新记录"
+  "Linux-Do": "[LD]Linux Do",
+  "Linux-Do-Metaverse": "[LDM]Linux Do 元宇宙",
+  "Linux-Do-Wiki": "[LDW]Linux Do Wiki",
+  "---2": {
+    "type": "separator"
+  },
+  "services": "精选服务",
+  "encyclopedia": "佬友百科",
+  "---3": {
+    "type": "separator"
+  },
+  "test": {
+    "title": "测试",
+    "type": "folder",
+    "display": "hidden"
+  },
+  "change-log": "更新记录"
 }

@@ -7,8 +7,6 @@ import styles from '../../components/Login.module.css';
 import Loading from '../../components/loginloading.module.css';
 import ThemeWrapper from "../../components/ThemeWrapper";
 
-
-
 export default function Login() {
 
     useEffect(() => {

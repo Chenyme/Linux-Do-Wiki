@@ -1,0 +1,10 @@
+{
+  "culture": "社区文化",
+  "services": "服务索引",
+  "leader": {
+    "title": "领导者",
+    "display": "hidden"
+  },
+  "trust-level": "信任等级",
+  "rules": "社区守则"
+}

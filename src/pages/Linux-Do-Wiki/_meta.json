@@ -1,0 +1,10 @@
+{
+  "services": {
+    "title": "服务索引",
+    "display": "hidden"
+  },
+  "standards": {
+    "title": "Wiki 维护规范",
+    "display": "hidden"
+  }
+}

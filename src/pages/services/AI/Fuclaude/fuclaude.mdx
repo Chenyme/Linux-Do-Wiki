@@ -1,0 +1,180 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
+Fuclaude
+===
+
+原定的域名被抢注，因此改名为 Fuclaude 始皇称之为 法克劳德。类比上一节所提的 OAIFree 镜像，就不难理解 Fuclaude 镜像是 Claude 的镜像站点了。目前镜像支持 OAuth2 登录，这也跟 OAIFree 用法相似，避免直接泄露 Token，同样支持会话隔离、过期时间等诸多功能。
+
+官方测试站点：
+
+- <Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>demo.fuclaude.com</Link>
+
+## 功能说明
+
+- 支持 FreeBSD 系统（Serv00）部署。
+
+- 支持 全流程代理，接码、注册均已搞定（注册需要国外手机号）。
+
+- 支持 Oauth 登录，跟 Oaifree 用法相似，避免直接泄露 Token。
+
+- 完美支持会话隔离，通过 Oauth 登录实现，跟 Oaifree 的 ShareToken 差不多。
+
+- 支持接入 道德审查，默认使用模型 text-moderation-latest 。
+
+- 支持 sessionKey 获取，接口 /api/auth/session。
+
+- 支持配置站点密码，原生保护你的镜像站点。
+
+- 支持配置过期时间 expire。
+
+## 如何部署
+
+### 自行下载部署
+
+- <Link href="https://github.com/wozulong/fuclaude/releases" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>【Fuclaude 啥也不是】 - Github</Link> 查看最新版本的 Fuclaude。
+
+### Docker-compose 部署
+
+```dockerfile copy filename="Dockerfile"
+version: '3'
+services:
+  fuclaude:
+    image: pengzhile/fuclaude
+    ports:
+      - "127.0.0.1:8181:8181"
+    environment:
+        # 时区（不需要改动）
+      - TZ=Asia/Shanghai
+        # 绑定的端口号（不需要改动）（改动需要把映射也一起改动）
+      - FUCLAUDE_BIND=0.0.0.0:8181
+        # 超时时间（不需要改动）
+      - FUCLAUDE_TIMEOUT=600
+        # 代理URL  socks5://username:password@ip:port （http也一样格式）
+      - FUCLAUDE_PROXY_URL=
+        # 是否执行真实的登出操作（true/false）（不需要改动）
+      - FUCLAUDE_REAL_LOGOUT=false
+        # 访问站点的密码（如果需要）
+      - FUCLAUDE_SITE_PASSWORD=
+        # Cookie加密的密钥（不需要改动）
+      - FUCLAUDE_COOKIE_SECRET=1234567890abcdefghijklmnopqrstuv
+        # 道德审查，使用OAI的基础URL
+      - FUCLAUDE_OPENAI_BASE_URL=https://api.openai.com/v1
+        # 道德审查，使用OAI的密钥
+      - FUCLAUDE_OPENAI_API_KEY=sk-xxx
+        # 启用或禁用内容审核、道德审查（true/false）
+      - FUCLAUDE_MODERATION_ENABLED=false
+        # 启用或禁用用户注册（true/false）
+      - FUCLAUDE_SIGNUP_ENABLED=false
+        # 显示或隐藏会话密钥（true/false）
+      - FUCLAUDE_SHOW_SESSION_KEY=false
+    restart: unless-stopped
+```
+
+### 阅读热佬教程 部署
+
+|<div style={{ width: '150px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>平台</div>| <div style={{ width: '370px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>帖子</div> | <div style={{ width: '200px', textAlign: 'center', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>作者</div> |
+|------|------|:------:|
+| Mac | <Link href="https://linux.do/t/topic/131633" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Mac 部署 Fuclaude</Link>                | @Leon01                        |
+| Windows | <Link href="https://linux.do/t/topic/131968" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Windows 部署 Fuclaude</Link>            | @likoo                         |
+| Docker | <Link href="https://linux.do/t/topic/131669" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Docker 部署 Fuclaude</Link>             | @Clever Hu                     |
+| Docker For Win | <Link href="https://linux.do/t/topic/134758" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Docker For Win 部署 Fuclaude</Link>    | @likoo                         |
+| 群晖nas | <Link href="https://linux.do/t/topic/131820" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>群晖nas 部署 Fuclaude</Link>            | @King-Huiwen-of-Qin            |
+| Serv00 | <Link href="https://linux.do/t/topic/132575" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Serv00 部署 Fuclaude 1</Link>           | @cself                         |
+| Serv00 | <Link href="https://linux.do/t/topic/131799" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Serv00 部署 Fuclaude 2</Link>           | @Mingyu                        |
+| Huggingface | <Link href="https://linux.do/t/topic/134344" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Huggingface 部署 Fuclaude</Link>        | @kingtest                      |
+| Alwaysdata | <Link href="https://linux.do/t/topic/135361" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Alwaysdata 部署 Fuclaude</Link>         | @樱夏影 SakuCat                 |
+| 宝塔面板 | <Link href="https://linux.do/t/topic/134001#dockerfuclaude-4" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>宝塔面板 部署 Fuclaude</Link>         | @YubinDong                |
+
+
+## 如何使用
+
+### 邮箱登录
+
+- 点击<Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>前往Fuclaude</Link>，使用邮箱登录。
+- 或者，使用您自行部署的地址进行邮箱登录。
+
+### Session Token登录
+
+- 按上一节 Session Token 的步骤获取 Session Token，再<Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>前往Fuclaude</Link>使用 Session Token 登录站点。
+- 或者，使用您自行部署的地址获取 Session Token，并使用 Session Token 登录。
+
+### Oauth 链接登录
+
+> 请确保替换 YOURDOMAIN 为你的域名，SESSION_KEY 为你的 Session Token，UNIQUE_NAME 为你的独一无二的名称。
+
+- **Curl**
+
+```shell copy filename="curl"
+curl 'http://YOURDOMAIN/manage-api/auth/oauth_token' \
+-H 'Content-Type: application/json' \
+-d '{
+    "session_key": SESSION_KEY,
+    "unique_name": UNIQUE_NAME
+}'
+```
+
+- **Python**
+
+```python copy filename="python"
+import requests
+
+domain = 'YOURDOMAIN'  # 替换为你的域名
+session_key = 'SESSION_KEY'  # 替换为你的 Session Token
+unique_name = 'UNIQUE_NAME'  # 替换为你的独一无二的名称
+
+response = requests.post(
+    url=f"http://{domain}/manage-api/auth/oauth_token",
+    headers={'Content-Type': 'application/json'},
+    json={
+        'session_key': session_key,
+        'unique_name': unique_name
+    })
+
+login_url = response.json().get('login_url')
+```
+- **Javascript**
+
+```javascript copy filename="javascript"
+const domain = 'YOURDOMAIN';  // 替换为你的域名
+const sessionKey = 'SESSION_KEY';  // 替换为你的 Session Token
+const uniqueName = 'UNIQUE_NAME';  // 替换为你的独一无二的名称
+
+const url = `http://${domain}/manage-api/auth/oauth_token`;
+
+const data = {
+    session_key: sessionKey,
+    unique_name: uniqueName
+};
+
+fetch(url, {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+})
+.then(response => response.json())
+.then(data => {
+    const loginUrl = data.login_url;
+    // 你可以在这里处理 loginUrl
+    console.log(loginUrl);
+})
+.catch(error => {
+    console.error('Error:', error);
+});
+```
+
+<br></br>
+
+<Image src="/fuclaude.png" width={1206} height={708} />
+
+
+## 更多探索
+
+- <Link href="https://linux.do/t/topic/131611" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>闲来无事搓的一个小玩具</Link>
+- <Link href="https://linux.do/t/topic/136358" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Fuclaude 食用指南</Link>
+- <Link href="https://linux.do/t/topic/134197" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>小玩具也能有炸裂功能</Link>
+- <Link href="https://linux.do/t/topic/155769" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>你们新注册的Claude账号还好吗？</Link>
+- <Link href="https://linux.do/t/topic/135785" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>建立一个 Fuclaude Shared Chat 的第二步</Link>
+- <Link href="https://linux.do/t/topic/162623" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>Fuclaude Helper 什么时候能出来呢？</Link>
