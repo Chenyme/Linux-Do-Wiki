@@ -1,6 +1,6 @@
 import styles from './LinuxdoUserCard.module.css';
 import React, {useEffect, useState} from "react";
-import * as linuxdoUserDataService from "../service/web/linuxdoUserDataService";
+import * as linuxdoUserDataService from "../../../service/web/linuxdoUserDataService";
 
 const LinuxdoUserCard = ({ linuxdoUsername }) => {
     const [simplifiedUser, setSimplifiedUser] = useState(null);

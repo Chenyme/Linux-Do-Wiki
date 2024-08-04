@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import ThemeWrapper from "./components/ThemeWrapper";
-import ScrollToTop from './components/ScrollToTop';
+import ThemeWrapper from "./components/common/wrapper/ThemeWrapper";
+import ScrollToTop from './components/global/ScrollToTop';
 import React from "react";
 
 export default {

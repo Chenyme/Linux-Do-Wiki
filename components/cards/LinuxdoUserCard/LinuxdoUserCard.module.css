@@ -151,7 +151,7 @@
 
 @font-face {
     font-family: 'Farrington 7B';
-    src: url('../public/Farrington-7B.ttf') format('truetype');
+    src: url('../../../public/Farrington-7B.ttf') format('truetype');
 }
 
 .id {

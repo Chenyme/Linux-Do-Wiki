@@ -3,9 +3,9 @@ import Link from 'next/link'
 import Image from 'next/image';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import styles from '../../components/Login.module.css';
-import Loading from '../../components/loginloading.module.css';
-import ThemeWrapper from "../../components/ThemeWrapper";
+import styles from '../../components/pages/login/Login.module.css';
+import Loading from '../../components/pages/login/loginloading.module.css';
+import ThemeWrapper from "../../components/common/wrapper/ThemeWrapper";
 
 export default function Login() {
 
