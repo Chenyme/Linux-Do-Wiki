@@ -25,11 +25,6 @@
       }
     }
   },
-  "honer": {
-    "title": "共建荣誉榜",
-    "type": "page",
-    "href": "https://wiki.linux.do/honor"
-  },
   "user": {
     "theme": {
       "breadcrumb": false,
@@ -42,10 +37,7 @@
     "display": "hidden"
   },
   "index": "欢迎",
-  "announcement":  {
-    "title": "公告",
-    "display": "hidden"
-  },
+  "announcement":  "公告",
   "honor": "共建荣誉榜",
   "---1": {
     "type": "separator"
@@ -61,10 +53,6 @@
   "---3": {
     "type": "separator"
   },
-  "test": {
-    "title": "测试",
-    "type": "folder",
-    "display": "hidden"
-  },
+  "test": "公开测试",
   "change-log": "更新记录"
 }

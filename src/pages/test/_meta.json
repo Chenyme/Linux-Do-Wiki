@@ -1,6 +1,3 @@
 {
-  "test": {
-    "LinuxdoLinksTest": "Linux Do 格式化链接测试",
-    "display": "hidden"
-  }
+  "LinuxdoLinksTest": "Linux Do 格式化链接测试"
 }
