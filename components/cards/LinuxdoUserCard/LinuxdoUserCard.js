@@ -2,19 +2,23 @@ import styles from './LinuxdoUserCard.module.css';
 import React, {useEffect, useState} from "react";
 import * as linuxdoUserDataService from "../../../service/web/linuxdoUserDataService";
 
-const LinuxdoUserCard = ({ linuxdoUsername }) => {
+const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
     const [simplifiedUser, setSimplifiedUser] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const user = await linuxdoUserDataService.retrieveSimplifiedUser(linuxdoUsername);
-                setSimplifiedUser(user);
-            } catch (error) {
-                console.error(error);
-            }
-        };
-        fetchData();
+        if (forceSimplifiedUser) {
+            setSimplifiedUser(forceSimplifiedUser);
+        } else {
+            const fetchData = async () => {
+                try {
+                    const user = await linuxdoUserDataService.retrieveSimplifiedUser(linuxdoUsername);
+                    setSimplifiedUser(user);
+                } catch (error) {
+                    console.error(error);
+                }
+            };
+            fetchData();
+        }
     }, [linuxdoUsername]);
 
     // ont user or loading
