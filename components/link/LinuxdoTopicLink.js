@@ -21,11 +21,27 @@ const LinuxdoTopicLink = ({linuxdoTopicId}) => {
 
     if (!simplifiedTopic) {
         return (
-            <span
-                style={{color: "#ffb003"}}
-            >
-                Linux Do 话题 #{linuxdoTopicId}
-            </span>
+            <TooltipWrapper
+                tooltipId={"topic" + linuxdoTopicId}
+                children={
+                    <span
+                        style={{color: "#ffb003"}}
+                    >
+                    Linux Do 话题 #{linuxdoTopicId}
+                </span>
+                }
+                tooltipChildren={
+                    <>
+                        <div>糟糕！该页面是一个不公开页面。<br/>您可能没有权限查看请求的资源。<br/>您可以尝试：</div>
+                        <br/>
+                        <BlueLinkWrapper
+                            herf={"https://linux.do/t/topic/" + linuxdoTopicId}
+                            text={"访问 Linux Do 话题 #" + linuxdoTopicId}
+                            target="_blank"
+                        />
+                    </>
+                }
+            />
         );
     };
 
