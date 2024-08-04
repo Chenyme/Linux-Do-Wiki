@@ -5,7 +5,7 @@ const TooltipWrapper = ({tooltipId, children, tooltipChildren}) => {
     const sharpTooltipId = "#" + tooltipId;
 
     return (
-        <div>
+        <span>
             <a
                 id={tooltipId}
                 data-tooltip-delay-show={200}
@@ -25,7 +25,7 @@ const TooltipWrapper = ({tooltipId, children, tooltipChildren}) => {
             >
                 {tooltipChildren}
             </Tooltip>
-        </div>
+        </span>
     );
 };
 
