@@ -1,0 +1,68 @@
+import Link from 'next/link';
+import { Tabs } from 'nextra/components'
+import LinuxdoTopicLink from "../../../../../components/link/LinuxdoTopicLink";
+
+## Chat2API - OAIFree
+
+### 功能介绍
+
+Chat2API - OAIFree 是始皇对 OpenAI 相关接口进行转换，模拟 API 调用格式，把 access token 传进去就开转，可以实现比如对话、tts、whisper、画图等 API 调用方式。
+
+- 只为ChatGPT Plus提供服务。
+- 目前频控 10/10s，将来一定会跟 LINUX DO Connect 挂钩。
+- 限制了 whisper 上传文件大小为：4M。
+- 支持使用 gizmo，使用 g-xxx 的 id 作为模型名即可。
+- Team 账号只需要传递 ChatGPT-Account-ID 头即可实现切换。
+
+而这一切，只需要 ChatGPT Plus 账号的 Access Token 即可调用！
+
+### 如何调用
+
+- Team 账号只需把 `<access token>` 替换成 `<access token>,<team account id>`
+
+<Tabs items={['Curl', 'Python']} defaultIndex="1">
+    <Tabs.Tab>
+        ```shell copy filename="curl"
+        curl https://api.oaifree.com/v1 \
+          -H "Content-Type: application/json" \
+          -H "Authorization: Bearer <access token>" \  # 替换为你的 ACCESS TOKEN
+          -d '{
+            "model": "gpt-4o-mini",
+            "messages": [
+              {"role": "system", "content": "You are a helpful assistant."},
+              {"role": "user", "content": "What is a LLM?"}
+            ]
+          }'
+        ```
+    </Tabs.Tab>
+
+    <Tabs.Tab>
+        ```python copy filename="python"
+        from openai import OpenAI
+
+        client = OpenAI(
+            api_key="<access token>",  # 替换为你的 ACCESS TOKEN
+            base_url="https://api.oaifree.com/v1"
+        )
+
+        response = client.chat.completions.create(
+          model="gpt-4o-mini",
+          messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": "What is a LLM?"}
+          ]
+        )
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+### 更多探索
+
+- <LinuxdoTopicLink linuxdoTopicId="51859"/>
+- <LinuxdoTopicLink linuxdoTopicId="41375"/>
+- <LinuxdoTopicLink linuxdoTopicId="41254"/>
+- <LinuxdoTopicLink linuxdoTopicId="50789"/>
+- <LinuxdoTopicLink linuxdoTopicId="51676"/>
+- <LinuxdoTopicLink linuxdoTopicId="40928"/>
+- <LinuxdoTopicLink linuxdoTopicId="49556"/>
+- <LinuxdoTopicLink linuxdoTopicId="65740"/>

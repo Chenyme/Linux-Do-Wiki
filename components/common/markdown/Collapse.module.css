@@ -1,0 +1,45 @@
+/* components/common/markdown/Collapse.module.css */
+
+.details {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.summary {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+  padding: 5px;
+  transition: color 0.3s ease;
+}
+
+.summary:hover {
+  color: #0070f3;
+}
+
+.details[open] {
+  background-color: #e9ecef;
+}
+
+.details[open] .summary {
+  color: #0070f3;
+}
+
+.details[open] p {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
