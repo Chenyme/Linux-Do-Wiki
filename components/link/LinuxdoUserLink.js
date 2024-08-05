@@ -54,7 +54,7 @@ const LinuxdoUserLink = ({ linuxdoUsername }) => {
                     />
                     <br/>
                     <BlueLinkWrapper
-                        herf={"https://linux.do/u/" + name + "/summary"}
+                        herf={"https://linux.do/u/" + username + "/summary"}
                         text={"访问 " + name + " 的 Linux Do 主页"}
                         target="_blank"
                     />

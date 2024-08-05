@@ -15,6 +15,7 @@ export async function retrieveSimplifiedTopic(topicId) {
     const json = await retrieveTopicJson(topicId);
     const simplifiedTopic = {
         id: json.id,// fixed
+        createdBy: json.details.created_by,// fixed
         title: json.title,// may change
         createdAt: json.created_at,
         userId: json.user_id,// fixed
