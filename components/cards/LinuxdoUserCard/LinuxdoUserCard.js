@@ -98,7 +98,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
         name = username;
     }
     const avatarTemplate = simplifiedUser.avatarTemplate;
-    const avatar288Url = "/image/linuxdo" + avatarTemplate.replace("/{size}/", "/288/");
+    const avatar288Url = "/image/linuxdo" + avatarTemplate.replace("{size}", "288");
     const title = simplifiedUser.title;
     const trustLevel = simplifiedUser.trustLevel;
     let trustLevelName;
