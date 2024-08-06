@@ -1,19 +1,14 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import { Tabs } from 'nextra/components'
+import Image from 'next/image';
+import { Callout, Tabs } from 'nextra/components';
 import LinuxdoTopicLink from "../../../../../components/link/LinuxdoTopicLink";
 import LinuxdoUserLink from "../../../../../components/link/LinuxdoUserLink";
 
 ## Fuclaude
 
-### 名称由来
-原定的域名被抢注，因此改名为 Fuclaude 始皇称之为 法克劳德。类比上一节所提的 OAIFree 镜像，就不难理解 Fuclaude 镜像是 Claude 的镜像站点了。目前镜像支持 OAuth2 登录，这也跟 OAIFree 用法相似，避免直接泄露 Token，同样支持会话隔离、过期时间等诸多功能。
+### 功能介绍
 
-官方测试站点：
-
-- <Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>demo.fuclaude.com</Link>
-
-### 功能说明
+由于原定的域名被抢注，因此改名为 Fuclaude（<Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>demo.fuclaude.com</Link>） 始皇称之为 法克劳德。联想上一节所提的 OAIFree 镜像，就不难理解 Fuclaude 镜像是 Claude 的镜像站点了。目前镜像支持 OAuth2 登录，这也跟 OAIFree 用法相似，避免直接泄露 Token，同样支持会话隔离、过期时间等诸多功能。
 
 - 支持 FreeBSD 系统（Serv00）部署。
 
@@ -37,9 +32,11 @@ import LinuxdoUserLink from "../../../../../components/link/LinuxdoUserLink";
 
 ### 如何部署
 
-#### 1. 自行下载部署
+#### 1. 手动下载部署
 
-- <Link href="https://github.com/wozulong/fuclaude/releases" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>【Fuclaude 啥也不是】 - Github</Link> 查看最新版本的 Fuclaude。
+前往 <Link href="https://github.com/wozulong/fuclaude/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>【Fuclaude 啥也不是】 - Github</Link> 查看最新版本的 Fuclaude。
+
+在仓库的 Release 页面下载最新版本的 Fuclaude，解压后自行食用。
 
 #### 2. Docker-compose 部署
 
@@ -94,88 +91,95 @@ services:
 | 宝塔面板 | <LinuxdoTopicLink linuxdoTopicId="134001"/> |
 
 
-### 如何使用
+### 如何登录使用
 
-#### 1. 使用邮箱登录
+#### 1. 使用 邮箱账户 登录
 
-- 点击<Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>前往Fuclaude</Link>，使用邮箱登录。
-- 或者，使用您自行部署的地址进行邮箱登录。
+点击 <Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>前往Fuclaude</Link>，使用您 Claude 的注册邮箱直接登录。或者，使用您自行部署的地址进行邮箱登录。
 
-#### 2. Session Token登录
+- 目前 Fuclaude 已代理 Claude 接码，不必担心获取不到验证码。
 
-- 按上一节 Session Token 的步骤获取 Session Token，再<Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}>前往Fuclaude</Link>使用 Session Token 登录站点。
-- 或者，使用您自行部署的地址获取 Session Token，并使用 Session Token 登录。
 
-#### 3. Oauth 链接登录
+#### 2. 输入 Session Token 登录
 
-- 请确保将 YOURDOMAIN 替换为你的域名，SESSION_KEY 为你的 Session Token，UNIQUE_NAME 为你的独一无二的名称。
+首先，按上一节 Session Token 的步骤获取 Session Token。或者，使用您自行部署的地址获取 Session Token。
 
-<Tabs items={['Curl', 'Python', 'Javascript']} defaultIndex="1">
-    <Tabs.Tab>
-        ```shell copy filename="curl"
-        curl 'http://YOURDOMAIN/manage-api/auth/oauth_token' \
-        -H 'Content-Type: application/json' \
-        -d '{
-            "session_key": SESSION_KEY,
-            "unique_name": UNIQUE_NAME
-        }'
-        ```
-    </Tabs.Tab>
+再 <Link href="https://demo.fuclaude.com/" target="_blank" style={{ textDecoration: 'none', color: '#3A9FE8' }}> 前往Fuclaude </Link>使用 Session Token 登录镜像服务。
 
-    <Tabs.Tab>
-        ```python copy filename="python"
-        import requests
 
-        domain = 'YOURDOMAIN'  # 替换为你的域名
-        session_key = 'SESSION_KEY'  # 替换为你的 Session Token
-        unique_name = 'UNIQUE_NAME'  # 替换为你的独一无二的名称
+#### 3. Oauth 获取登录链接
 
-        response = requests.post(
-            url=f"http://{domain}/manage-api/auth/oauth_token",
-            headers={'Content-Type': 'application/json'},
-            json={
-                'session_key': session_key,
-                'unique_name': unique_name
-            })
+- 请确保替换 YOURDOMAIN 为你的域名，SESSION_KEY 为你的 Session Token，UNIQUE_NAME 为你的独一无二的名称。
 
-        login_url = response.json().get('login_url')
-        ```
-    </Tabs.Tab>
+<Tabs items={['Curl', 'Python', 'Javascript']}>
+  <Tabs.Tab>
+    ```shell copy filename="curl"
+    curl 'http://YOURDOMAIN/manage-api/auth/oauth_token' \
+    -H 'Content-Type: application/json' \
+    -d '{
+        "session_key": SESSION_KEY,
+        "unique_name": UNIQUE_NAME
+    }'
+    ```
+  </Tabs.Tab>
 
-    <Tabs.Tab>
-        ```javascript copy filename="javascript"
-        const domain = 'YOURDOMAIN';  // 替换为你的域名
-        const sessionKey = 'SESSION_KEY';  // 替换为你的 Session Token
-        const uniqueName = 'UNIQUE_NAME';  // 替换为你的独一无二的名称
+  <Tabs.Tab>
+    ```python copy filename="python"
+    import requests
 
-        const url = `http://${domain}/manage-api/auth/oauth_token`;
+    domain = 'YOURDOMAIN'  # 替换为你的域名
+    session_key = 'SESSION_KEY'  # 替换为你的 Session Token
+    unique_name = 'UNIQUE_NAME'  # 替换为你的独一无二的名称
 
-        const data = {
-            session_key: sessionKey,
-            unique_name: uniqueName
-        };
-
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
+    response = requests.post(
+        url=f"http://{domain}/manage-api/auth/oauth_token",
+        headers={'Content-Type': 'application/json'},
+        json={
+            'session_key': session_key,
+            'unique_name': unique_name
         })
-        .then(response => response.json())
-        .then(data => {
-            const loginUrl = data.login_url;
-            // 你可以在这里处理 loginUrl
-            console.log(loginUrl);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-        });
-        ```
-    </Tabs.Tab>
+
+    login_url = response.json().get('login_url')
+    ```
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    ```javascript copy filename="javascript"
+    const domain = 'YOURDOMAIN';  // 替换为你的域名
+    const sessionKey = 'SESSION_KEY';  // 替换为你的 Session Token
+    const uniqueName = 'UNIQUE_NAME';  // 替换为你的独一无二的名称
+
+    const url = `http://${domain}/manage-api/auth/oauth_token`;
+
+    const data = {
+        session_key: sessionKey,
+        unique_name: uniqueName
+    };
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        const loginUrl = data.login_url;
+        // 你可以在这里处理 loginUrl
+        console.log(loginUrl);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+    ```
+  </Tabs.Tab>
 </Tabs>
 
+
+
 ### 更多探索
+
 - <LinuxdoTopicLink linuxdoTopicId="131611"/>
 - <LinuxdoTopicLink linuxdoTopicId="136358"/>
 - <LinuxdoTopicLink linuxdoTopicId="134197"/>

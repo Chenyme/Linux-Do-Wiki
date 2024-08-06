@@ -23,9 +23,9 @@ const LinuxdoUserLink = ({ linuxdoUsername }) => {
     if (!simplifiedUser) {
         return (
             <span
-                style={{color: "#ffb003"}}
+                style={{color: "#fea000"}}
             >
-                @{linuxdoUsername}
+                <b>@{linuxdoUsername}</b>
             </span>
         );
     }
@@ -42,9 +42,9 @@ const LinuxdoUserLink = ({ linuxdoUsername }) => {
             tooltipId={"User" + id}
             children={
                 <span
-                    style={{color: "#ffb003"}}
+                    style={{color: "#fea000"}}
                 >
-                    @{name}
+                    <b>@{name}</b>
                 </span>
             }
             tooltipChildren={
@@ -54,11 +54,11 @@ const LinuxdoUserLink = ({ linuxdoUsername }) => {
                     />
                     <br/>
                     <b>
-                    <BlueLinkWrapper
-                        herf={"https://linux.do/u/" + username + "/summary"}
-                        text={"访问 " + name + " 的社区主页"}
-                        target="_blank"
-                    />
+                        <BlueLinkWrapper
+                            herf={"https://linux.do/u/" + username + "/summary"}
+                            text={"访问 " + name + " 的 Linux Do 主页"}
+                            target="_blank"
+                        />
                     </b>
                 </>
             }

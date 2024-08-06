@@ -16,7 +16,7 @@
           "href": "https://t.me/linux_do_channel"
       },
       "社区群组": {
-          "title": "社区群组",
+          "title": "加入群组",
           "href": "https://t.me/ja_netfilter_group"
       },
       "服务状态": {
@@ -42,7 +42,7 @@
   "---1": {
     "type": "separator"
   },
-  "Linux-Do": "[LD] Linux Do",
+  "Linux-Do": "[LD]Linux Do",
   "---2": {
     "type": "separator"
   },

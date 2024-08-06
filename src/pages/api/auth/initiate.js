@@ -1,7 +1,7 @@
 import crypto from 'crypto';
 
 const CLIENT_ID = process.env.CLIENT_ID;
-const REDIRECT_URI = 'http://192.168.2.6:3000/api/auth/callback';
+const REDIRECT_URI = 'http://wiki.linux.do/api/auth/callback';
 const AUTHORIZATION_ENDPOINT = 'https://connect.linux.do/oauth2/authorize';
 
 export default (req, res) => {

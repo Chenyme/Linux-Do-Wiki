@@ -1,9 +1,9 @@
 {
   "culture": "社区文化",
-  "leader": {
+  "rules": "社区守则",
+  "trust-level": "信任等级",
+    "leader": {
     "title": "领导者",
     "display": "hidden"
-  },
-  "trust-level": "信任等级",
-  "rules": "社区守则"
+  }
 }

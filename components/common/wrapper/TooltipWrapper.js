@@ -28,7 +28,7 @@ const TooltipWrapper = ({ tooltipId, children, tooltipChildren, initialPlace = "
     const anchorElement = document.getElementById(tooltipId);
     if (anchorElement) {
       const rect = anchorElement.getBoundingClientRect();
-      if (rect.top < 400) {
+      if (rect.top < 380) {
         setPlace('bottom');
       } else if (window.innerHeight - rect.bottom < 50) {
         setPlace('top');

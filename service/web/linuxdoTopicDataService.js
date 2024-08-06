@@ -1,4 +1,5 @@
 import httpService from "./httpService";
+import Link from 'next/link'
 
 // fetch() on console to see the full response
 export async function retrieveTopicJson(topicId) {
@@ -20,9 +21,9 @@ export async function retrieveSimplifiedTopic(topicId) {
         createdAt: json.created_at,
         userId: json.user_id,// fixed
         categoryId: json.category_id,// may change
-        tags: json.tags[0],// may none, one, or more
+        tags: json.tags,// may none, one, or more
         postsCount: json.posts_count,// 盖楼的层数
-        views: json.views,// 浏览
+        views: json.views,// 浏览量
         likeCount: json.like_count,// 赞
         lastPostedAt: json.last_posted_at,
         wordCount: json.word_count,

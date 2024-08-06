@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Cookie from 'js-cookie';
 
-const UserIcon = () => {
+
+const UserAvatar = () => {
     const [user, setUser] = useState(null);
     const [avatarUrl, setAvatarUrl] = useState('');
 
@@ -24,10 +25,10 @@ const UserIcon = () => {
                     alt="User Avatar"
                     style={{
                         borderRadius: '50%',
-                        width: '27px',
-                        height: '27px',
+                        width: '28px',
+                        height: '28px',
                         objectFit: 'cover',
-                        transform: 'translateX(-7px)' // 向左移动20px
+                        transform: 'translateX(-8px)'
                     }}
                 />
             )}
@@ -35,4 +36,4 @@ const UserIcon = () => {
     );
 };
 
-export default UserIcon;
+export default UserAvatar;

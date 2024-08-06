@@ -25,7 +25,7 @@ const LinuxdoTopicLink = ({linuxdoTopicId}) => {
                 tooltipId={"topic" + linuxdoTopicId}
                 children={
                     <span
-                        style={{color: "#ffa001"}}
+                        style={{color: "#fea000"}}
                     >
                     Linux Do 话题 #{linuxdoTopicId}
                 </span>
@@ -52,7 +52,6 @@ const LinuxdoTopicLink = ({linuxdoTopicId}) => {
     const postsCount = simplifiedTopic.postsCount;
     const views = simplifiedTopic.views;
     const likeCount = simplifiedTopic.likeCount;
-    const lastPostedAt = simplifiedTopic.lastPostedAt;
     const wordCount = simplifiedTopic.wordCount;
     const formatDate = (isoString) => {
         const date = new Date(isoString);
@@ -70,34 +69,34 @@ const LinuxdoTopicLink = ({linuxdoTopicId}) => {
             tooltipId={"topic" + id}
             children={
                 <span
-                    style={{color: "#ffa001"}}
+                    style={{color: "#fea000"}}
                 >
-                   {title}
+                    {title}
                 </span>
             }
-        tooltipChildren={
-            <>
-                <div style={{ marginBottom: '10px', fontSize: '16px', color: '#000', fontWeight: 'bold' }}>{title}</div>
-                <div style={{ marginBottom: '8px', color: '#555' }}>
-                    <span style={{ fontWeight: 'bold', color: '#555' }}>@{createdBy}</span> 发表于 <span style={{ fontWeight: 'bold', color: '#555' }}>{formatDate(createdAt)}</span>
-                </div>
-                <div style={{ marginBottom: '8px', color: '#555' }}>
-                    <span style={{ fontWeight: 'bold', color: '#555' }}>{postsCount}</span> 层回贴，
-                    <span style={{ fontWeight: 'bold', color: '#555' }}>{views}</span> 次浏览，
-                    <span style={{ fontWeight: 'bold', color: '#555' }}>{likeCount}</span> 人点赞，
-                    共 <span style={{ fontWeight: 'bold', color: '#555' }}>{wordCount}</span> 字
-                </div>
-                <div>
-                    <a
-                        href={"https://linux.do/t/topic/" + id}
-                        target="_blank"
-                        style={{ color: '#1e90ff', textDecoration: 'none', fontWeight: 'bold' }}
-                    >
-                        访问此话题 #{id}
-                    </a>
-                </div>
-            </>
-        }
+            tooltipChildren={
+                <>
+                    <div style={{ marginBottom: '8px', fontSize: '16px', color: '#000', fontWeight: 'bold' }}>{title}</div>
+                    <div style={{ marginBottom: '8px', color: '#555' }}>
+                        由 <span style={{ fontWeight: 'bold', color: '#555' }}>{createdBy}</span> 发表于 <span style={{ fontWeight: 'bold', color: '#555' }}>{formatDate(createdAt)}</span>
+                    </div>
+                    <div style={{ marginBottom: '8px', color: '#555' }}>
+                        <span style={{ fontWeight: 'bold', color: '#555' }}>{postsCount}</span> 层回贴，
+                        <span style={{ fontWeight: 'bold', color: '#555' }}>{views}</span> 次浏览，
+                        <span style={{ fontWeight: 'bold', color: '#555' }}>{likeCount}</span> 人点赞，
+                        共 <span style={{ fontWeight: 'bold', color: '#555' }}>{wordCount}</span> 字
+                    </div>
+                    <div>
+                        <a
+                            href={"https://linux.do/t/topic/" + id}
+                            target="_blank"
+                            style={{ color: '#1e90ff', textDecoration: 'none', fontWeight: 'bold' }}
+                        >
+                            访问此话题 #{id}
+                        </a>
+                    </div>
+                </>
+            }
         />
     );
 };

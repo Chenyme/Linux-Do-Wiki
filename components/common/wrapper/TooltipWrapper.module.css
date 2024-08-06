@@ -16,13 +16,13 @@
   position: absolute;
   padding: 20px !important;
   background: rgba(255, 255, 255, 0.8) !important;
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   color: rgba(51, 51, 51, 0.7) !important;
   border-radius: 12px !important;
   font-size: 14px !important;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
-  max-width: 420px !important;
+  max-width: 400px !important;
   word-wrap: break-word !important;
   z-index: 10 !important;
   transition: opacity 0.5s ease, transform 0.5s ease, background 0.5s ease, backdrop-filter 0.5s ease, color 0.5s ease !important;
@@ -32,12 +32,11 @@
 
 .tooltipContent.show {
   opacity: 1;
-  backdrop-filter: blur(10px);
   transform: translateY(0);
 }
 
 .tooltipContent.clear {
   background: rgba(255, 255, 255, 1) !important;
-  backdrop-filter: blur(15px) !important;
+  backdrop-filter: blur(0px) !important;
   color: rgba(51, 51, 51, 1) !important;
 }
