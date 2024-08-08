@@ -2,7 +2,7 @@ import styles from './LinuxdoUserCard.module.css';
 import React, {useEffect, useState} from "react";
 import * as linuxdoUserDataService from "../../../service/web/linuxdoUserDataService";
 
-const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
+const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser, frontId, backId}) => {
     const [simplifiedUser, setSimplifiedUser] = useState(null);
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
         return (
             <div className={styles.flipCard}>
                 <div className={styles.flipCardInner}>
-                    <div className={styles.flipCardFront}>
+                    <div className={styles.flipCardFront} id={frontId}>
                         <div className={styles.top}/>
                         <div className={styles.mid}/>
                         <div className={styles.bot}/>
@@ -59,7 +59,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
                             <div className={styles.id}>0000 0000 0000 0000</div>
                         </div>
                     </div>
-                    <div className={styles.flipCardBack}>
+                    <div className={styles.flipCardBack} id={backId}>
                         <div className={styles.back}/>
                         <div className={styles.strip}></div>
                         <div>
@@ -137,7 +137,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
         return (
             <div className={styles.flipCard}>
                 <div className={styles.flipCardInner}>
-                    <div className={styles.flipCardFront}>
+                    <div className={styles.flipCardFront} id={frontId}>
                         <div className={styles.top}/>
                         <div className={styles.mid}/>
                         <div className={styles.bot}/>
@@ -163,7 +163,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
                         </div>
                         <div className={styles.suspendedLock}>此账号已被封禁<br/>至 {suspendedTill}</div>
                     </div>
-                    <div className={styles.flipCardBack}>
+                    <div className={styles.flipCardBack} id={backId}>
                         <div className={styles.back}/>
                         <div className={styles.groupBack}>L I N U X &nbsp; D O N E</div>
                         <div className={styles.idBack}>{id}</div>
@@ -178,7 +178,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
     return (
         <div className={styles.flipCard}>
             <div className={styles.flipCardInner}>
-                <div className={styles.flipCardFront}>
+                <div className={styles.flipCardFront} id={frontId}>
                     <div className={styles.top}/>
                     <div className={styles.mid}/>
                     <div className={styles.bot}/>
@@ -211,7 +211,7 @@ const LinuxdoUserCard = ({linuxdoUsername, forceSimplifiedUser}) => {
                         <div className={styles.id}>{id}</div>
                     </div>
                 </div>
-                <div className={styles.flipCardBack}>
+                <div className={styles.flipCardBack} id={backId}>
                     <div className={styles.back}/>
                     <div className={styles.strip}></div>
                     <div>
