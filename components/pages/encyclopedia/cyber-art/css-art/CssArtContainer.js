@@ -1,4 +1,4 @@
-const CssOrigamiContainer = ({ styles }) => {
+const CssArtContainer = ({ styles }) => {
     return (
         <div className={styles.body}>
             <div className={styles.div}/>
@@ -6,4 +6,4 @@ const CssOrigamiContainer = ({ styles }) => {
     );
 };
 
-export default CssOrigamiContainer;
+export default CssArtContainer;
