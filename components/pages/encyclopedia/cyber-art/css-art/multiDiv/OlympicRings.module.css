@@ -1,8 +1,8 @@
 .olympicSymbol {
-    /*width: 800px;*/
+    width: 800px;
     height: 300px;
     display: grid;
-    place-content: center;
+    place-items: center;
     position: relative;
     transform-style: preserve-3d;
     /*transform: scale(0.75);*/

@@ -13,7 +13,6 @@
 /*    padding: 0;*/
 /*}*/
 .body {
-    background: #222923;
     display: grid;
     place-items: center;
     height: 300px;

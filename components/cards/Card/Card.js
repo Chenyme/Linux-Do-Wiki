@@ -1,6 +1,6 @@
 import styles from './Card.module.css';
 
-const Card = ({ heading, number, validThru, date, name, code }) => {
+const Card = ({heading, number, validThru, date, name, code }) => {
   return (
     <div className={styles.flipCard}>
       <div className={styles.flipCardInner}>

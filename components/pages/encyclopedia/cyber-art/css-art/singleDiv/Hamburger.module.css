@@ -1,5 +1,6 @@
 .body {
     height: 300px;
+    width: 450px;
     display: grid;
     place-items: center;
     background: #ffffe1;
@@ -9,6 +10,7 @@
 .div {
     height: 80px;
     width: 200px;
+    top: -35px;
     /* 上半部分 */
     background-image: linear-gradient(to bottom, #d66425, #fbc34c);
     border-radius: 50px 50px 20% 20%;

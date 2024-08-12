@@ -1,5 +1,6 @@
 .body {
-    height: 400px;
+    height: 380px;
+    width: 500px;
     background-color: #2e2e2e;
     display: grid;
     place-items: center;

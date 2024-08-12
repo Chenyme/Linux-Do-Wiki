@@ -1,5 +1,6 @@
 .body {
     height: 300px;
+    width: 500px;
     display: grid;
     place-items: center;
     background: radial-gradient(#c3ced0, #668588 80%);
@@ -8,6 +9,7 @@
 .div {
     width: 300px;
     height: 130px;
+    top: 15px;
     background:
             linear-gradient(to right,
             #111, #444 15% 85%, #111);

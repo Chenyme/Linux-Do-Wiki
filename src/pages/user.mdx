@@ -5,6 +5,7 @@ import LinuxdoUserCard from '../../components/cards/LinuxdoUserCard/LinuxdoUserC
 import loading from '../../components/pages/user/loadingcard.module.css';
 import styles from '../../components/pages/user/UserProfile.module.css';
 import * as linuxdoUserDataSummaryService from "../../service/web/linuxdoUserDataSummaryService";
+import Printer from "../../components/common/Printer";
 
 export default function Home() {
     const [user, setUser] = useState(null);
@@ -54,7 +55,22 @@ export default function Home() {
             </button>
         <div className={styles.container}>
             <div className={styles.flexContainer}>
-                <LinuxdoUserCard linuxdoUsername={user.username} />
+                <div>
+                <div id="usercard">
+                    <LinuxdoUserCard linuxdoUsername={user.username} frontId="frontId" backId="backId"/>
+                </div>
+                <br />
+                <Printer
+                    elementId="frontId"
+                    showChildren={
+                        <div style={{color: '#3A9FE8'}}>
+                           →保存卡片
+                        </div>
+                    }
+                    filename="front.png"
+                    format="png"
+                />
+                </div>
                 {userSummary && (
                     <div className={styles.summary}>
                         <infoTitle>{user.name} | 社区数据</infoTitle>
