@@ -1,13 +1,18 @@
 import LinuxdoUserLink from "../../../../components/link/LinuxdoUserLink";
-import CssArtContainer from "../../../../components/pages/encyclopedia/cyber-art/css-art/CssArtContainer";
-import OrizuruStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/Orizuru.module.css";
-import LinuxdoStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/Linuxdo.module.css";
-import CameraStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/Camera.module.css";
-import HamburgerStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/Hamburger.module.css";
+import SingleDivContainer from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/SingleDivContainer";
+import OrizuruStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/Orizuru.module.css";
+import LinuxdoStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/Linuxdo.module.css";
+import CameraStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/Camera.module.css";
+import HamburgerStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/Hamburger.module.css";
 import LinuxdoTopicLink from "../../../../components/link/LinuxdoTopicLink";
-import EggStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/Egg.module.css"
+import EggStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/Egg.module.css"
+import OlympicRings from "../../../../components/pages/encyclopedia/cyber-art/css-art/multiDiv/OlympicRings";
+import ClownStyles from "../../../../components/pages/encyclopedia/cyber-art/css-art/singleDiv/Clown.module.css";
+import Printer from "../../../../components/common/Printer";
 
 ## CSS艺术展
+
+### 单体`div`结构
 
 > 是的，就一个div。<br/>
 > 你没看错，还是只有一个div。<br/>
@@ -15,35 +20,148 @@ import EggStyles from "../../../../components/pages/encyclopedia/cyber-art/css-a
 > 不是哥们，哪有那么多，直接弄呗…<br/>
 > ——<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
 
-### 千纸鹤
+#### 千纸鹤
 
 作者：<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
 
-<CssArtContainer styles={OrizuruStyles}/>
+<div id="orizuru">
+    <SingleDivContainer styles={OrizuruStyles}/>
+</div>
+<Printer elementId="orizuru" filename="千纸鹤.jpeg" format="jpeg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 JPEG 格式下载】</span>
+         }
+/>
+<Printer elementId="orizuru" filename="千纸鹤.png" format="png"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 PNG 格式下载】</span>
+         }
+/>
+<Printer elementId="orizuru" filename="千纸鹤.svg" format="svg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 SVG 格式下载】</span>
+         }
+/>
 
-### Linux Do
+#### Linux Do
 
 作者：<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
 
-<CssArtContainer styles={LinuxdoStyles}/>
+<div id="linuxdo">
+    <SingleDivContainer styles={LinuxdoStyles}/>
+</div>
+<Printer elementId="linuxdo" filename="Linux_Do_Logo.jpeg" format="jpeg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 JPEG 格式下载】</span>
+         }
+/>
+<Printer elementId="linuxdo" filename="Linux_Do_Logo.png" format="png"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 PNG 格式下载】</span>
+         }
+/>
+<Printer elementId="linuxdo" filename="Linux_Do_Logo.svg" format="svg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 SVG 格式下载】</span>
+         }
+/>
 
-### 相机
+#### 相机
 
 作者：<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
 
-<CssArtContainer styles={CameraStyles}/>
+<div id="camera">
+    <SingleDivContainer styles={CameraStyles}/>
+</div>
+<Printer elementId="camera" filename="相机.jpeg" format="jpeg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 JPEG 格式下载】</span>
+         }
+/>
+<Printer elementId="camera" filename="相机.png" format="png"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 PNG 格式下载】</span>
+         }
+/>
+<Printer elementId="camera" filename="相机.svg" format="svg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 SVG 格式下载】</span>
+         }
+/>
 
-### 汉堡
+#### 汉堡
 
 作者：<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
 
-<CssArtContainer styles={HamburgerStyles}/>
+<div id="hamburger">
+    <SingleDivContainer styles={HamburgerStyles}/>
+</div>
+<Printer elementId="hamburger" filename="汉堡.jpeg" format="jpeg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 JPEG 格式下载】</span>
+         }
+/>
+<Printer elementId="hamburger" filename="汉堡.png" format="png"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 PNG 格式下载】</span>
+         }
+/>
+<Printer elementId="hamburger" filename="汉堡.svg" format="svg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 SVG 格式下载】</span>
+         }
+/>
 
-### 鸡蛋
+#### 鸡蛋
 
 作者：<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
 
-<CssArtContainer styles={EggStyles}/>
+<div id="egg">
+    <SingleDivContainer styles={EggStyles}/>
+</div>
+<Printer elementId="egg" filename="鸡蛋.jpeg" format="jpeg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 JPEG 格式下载】</span>
+         }
+/>
+<Printer elementId="egg" filename="鸡蛋.png" format="png"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 PNG 格式下载】</span>
+         }
+/>
+<Printer elementId="egg" filename="鸡蛋.svg" format="svg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 SVG 格式下载】</span>
+         }
+/>
+
+### 复合`div`结构
+
+> 准备好，我要开始装X了。<br/>
+> ——<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
+
+#### 奥运五环
+
+作者：<LinuxdoUserLink linuxdoUsername="Clarke.L"/>
+
+<div id="olympicRings">
+    <OlympicRings/>
+</div>
+<Printer elementId="olympicRings" filename="奥运五环.jpeg" format="jpeg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 JPEG 格式下载】</span>
+         }
+/>
+<Printer elementId="olympicRings" filename="奥运五环.png" format="png"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 PNG 格式下载】</span>
+         }
+/>
+<Printer elementId="olympicRings" filename="奥运五环.svg" format="svg"
+         showChildren={
+             <span style={{color: '#3A9FE8'}}>【以 SVG 格式下载】</span>
+         }
+/>
 
 **相关话题**：
 - <LinuxdoTopicLink linuxdoTopicId="161705"/>
@@ -51,3 +169,4 @@ import EggStyles from "../../../../components/pages/encyclopedia/cyber-art/css-a
 - <LinuxdoTopicLink linuxdoTopicId="165253"/>
 - <LinuxdoTopicLink linuxdoTopicId="165647"/>
 - <LinuxdoTopicLink linuxdoTopicId="172478"/>
+- <LinuxdoTopicLink linuxdoTopicId="174949"/>
