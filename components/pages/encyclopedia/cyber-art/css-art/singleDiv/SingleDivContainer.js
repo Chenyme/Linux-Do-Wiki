@@ -1,4 +1,4 @@
-const CssArtContainer = ({ styles }) => {
+const SingleDivContainer = ({ styles }) => {
     return (
         <div className={styles.body}>
             <div className={styles.div}/>
@@ -6,4 +6,4 @@ const CssArtContainer = ({ styles }) => {
     );
 };
 
-export default CssArtContainer;
+export default SingleDivContainer;
