@@ -1,0 +1,64 @@
+import LinuxdoTopicLink from "../../../../components/link/LinuxdoTopicLink";
+import Image from 'next/image';
+
+## 社区网站访问出现问题
+
+### 简介
+
+国内部分地区对 Linux Do 实施了 DNS 污染，导致在无代理的情况下无法愉快地水帖。虽然建议使用代理访问 L 站，但是某些功能（如邀请码发放和使用）需要国内 IP，造成了一些困难。关于这个话题的分析和讨论请见<LinuxdoTopicLink linuxdoTopicId="180346"/>。
+
+目前，大部分地区的默认 DNS 和几乎所有第三方 DNS 都可以正常解析域名，因此以下说明仅适用于江苏部分地区。
+
+### 浏览器操作
+
+按照这种方式操作，你将同时获得更加安全的 DNS over HTTPS 体验。
+
+#### Firefox
+
+参考 [DNSPod 的教程](https://docs.dnspod.cn/public-dns/firefox-public-dns/)，但是该文章已经过时。
+
+打开 Firefox 的[设置页面](about:preferences)，在左侧选择“隐私和安全”，找到 DNS over HTTPS 选项，并选择“最大保护”，“自定义”，填入一个 DoH 地址，例如国内可用的：
+
+- DNSPod（腾讯）：`https://doh.pub/dns-query`；
+- AliDNS（阿里巴巴）：`https://doh.alidns.com/dns-query`。
+
+<Image src=/firefox-dns.png width={1200}>
+
+#### Chrome
+
+参考 [DNSPod 的教程](https://docs.dnspod.cn/public-dns/chrome-public-dns/)。
+
+打开 Chrome 的[设置页面](chrome://settings)，在左侧选择“隐私设置和安全性”，选择“安全”，并在“高级”部分勾选“使用安全 DNS”，并选择“自定义”，输入上述地址。
+
+<Image src=/chrome-dns.png width={1200}>
+
+### 操作系统操作
+
+#### Linux 通用
+
+大部分 Linux 发行版使用 systemd-resolved 提供 DNS 服务单元。可以如下修改：
+
+```bash
+sudo nano /etc/resolv.conf
+```
+
+删除这个文件内的所有内容，并添加：
+
+```txt
+nameserver 119.29.29.29
+nameserver 223.5.5.5
+```
+
+然后保存退出，将这个文件设为不可修改，以免 NetworkManager 覆盖你的设置：
+
+```bash
+sudo chattr +i /etc/resolv.conf
+```
+
+#### Windows
+
+待您补充……
+
+#### macOS
+
+待您补充……
