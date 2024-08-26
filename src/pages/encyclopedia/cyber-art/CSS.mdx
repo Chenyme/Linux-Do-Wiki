@@ -13,6 +13,7 @@ import CenteredContainer from '../../../../components/pages/common/CenteredConta
 import LinuxdoUserLink from "../../../../components/link/LinuxdoUserLink";
 import LinuxdoTopicLink from "../../../../components/link/LinuxdoTopicLink";
 import LinuxdoUserCard from "../../../../components/cards/LinuxdoUserCard/LinuxdoUserCard";
+import TextInteraction from "../../../../components/pages/encyclopedia/cyber-art/css-art/multiDiv/TextInteraction";
 
 ## CSS 赛博艺术展
 > 是的，就一个div。<br/>
@@ -252,4 +253,35 @@ import LinuxdoUserCard from "../../../../components/cards/LinuxdoUserCard/Linuxd
 />
 <Link href="https://github.com/Chenyme/Linux-Do-Wiki/blob/main/components/pages/encyclopedia/cyber-art/css-art/singleDiv/Linuxdo.module.css" target="_blank" style={{ textDecoration: 'none' , color: '#3A9FE8' }}>[CSS]</Link>
 </div>
+</CenteredContainer>
+
+---
+
+<CenteredContainer>
+    ### 文字互动
+    <br />
+    <br />
+    <div id="textInteraction">
+        <TextInteraction text="LinuxDo"/>
+    </div>
+    <br />
+    <br />
+    <div>
+        <Printer elementId="textInteraction" filename="文字互动.jpeg" format="jpeg"
+                 showChildren={
+                     <span style={{color: '#3A9FE8'}}>[JPEG]&nbsp;&nbsp;</span>
+                 }
+        />
+        <Printer elementId="textInteraction" filename="文字互动.png" format="png"
+                 showChildren={
+                     <span style={{color: '#3A9FE8'}}>[PNG]&nbsp;&nbsp;</span>
+                 }
+        />
+        <Printer elementId="textInteraction" filename="文字互动.svg" format="svg"
+                 showChildren={
+                     <span style={{color: '#3A9FE8'}}>[SVG]&nbsp;&nbsp;</span>
+                 }
+        />
+        <Link href="https://github.com/Chenyme/Linux-Do-Wiki/blob/main/components/pages/encyclopedia/cyber-art/css-art/multiDiv/TextInteraction.module.css" target="_blank" style={{ textDecoration: 'none' , color: '#3A9FE8' }}>[CSS]</Link>
+    </div>
 </CenteredContainer>
