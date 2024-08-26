@@ -24,7 +24,7 @@
 }
 
 .yellow {
-    top: 70px;
+    top: 120px;
     left: 160px;
     border-color: #FCB131;
     transform: rotateX(0deg);
@@ -37,7 +37,7 @@
 }
 
 .green {
-    top: 70px;
+    top: 120px;
     left: 400px;
     border-color: #00A651;
     transform: translateZ(100px) rotateX(70deg) scaleY(2.93);
