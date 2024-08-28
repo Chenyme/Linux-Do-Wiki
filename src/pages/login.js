@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 import styles from '../../components/pages/login/Login.module.css';
 import Loading from '../../components/pages/login/loginloading.module.css';
 import ThemeWrapper from "../../components/common/wrapper/ThemeWrapper";
+import {useSelector} from "react-redux";
 
 export default function Login() {
 
@@ -38,7 +39,7 @@ export default function Login() {
             <div className={styles.card}>
                 <Image src='/linuxdo_logo_with_light_text.png' width={180} height={60} alt="LinuxDo Logo" style={{filter: 'drop-shadow(2px 2px 2px rgba(27, 26, 30,0.4))'}} />
                 <h1 className={styles.title}>Verify With Linux Do</h1>
-                <p className={styles.description}>为保护社区用户权益，请验证后访问 Wiki 文档！</p>
+                <p className={styles.description}>为保护社区用户权益<br/>请验证后访问 Wiki 文档</p>
                 <br></br>
                 <br></br>
                 <section class={Loading.dotsContainer}>
