@@ -36,7 +36,10 @@ export default async (req, res) => {
         });
 
         // 保存用户数据到cookie
-        res.setHeader('Set-Cookie', serialize('user', JSON.stringify(userResponse.data), { path: '/' }));
+        res.setHeader('Set-Cookie', serialize('user', JSON.stringify(userResponse.data), {
+            path: '/',
+            maxAge: 7200 // 2 hours
+        }));
 
         // 重定向到首页或其他受保护页面
         res.redirect('/');

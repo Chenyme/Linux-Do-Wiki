@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Cookie from 'js-cookie';
 import {Provider, useDispatch, useSelector} from "react-redux";
 import {store, persistor} from "../../service/storage/store";
-import {set} from "../../service/storage/slice/enterUriSlice";
+import {clear, set} from "../../service/storage/slice/enterUriSlice";
 import {PersistGate} from "redux-persist/integration/react";
 
 function MyApp({ Component, pageProps }) {
@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }) {
         if (user) {
             setIsAuthenticated(true);
             if (router.pathname === '/') {
-                dispatch(set('/'));
+                dispatch(clear);
                 router.push(enterUri);
             }
         } else {

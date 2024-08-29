@@ -7,8 +7,11 @@ const enterUriSlice = createSlice({
         set: (state, action) => {
             state.value = action.payload;
         },
+        clear: (state) => {
+            state.value = '/';
+        },
     },
 });
 
-export const { set } = enterUriSlice.actions;
+export const { set, clear } = enterUriSlice.actions;
 export default enterUriSlice.reducer;

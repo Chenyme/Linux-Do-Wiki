@@ -8,11 +8,9 @@ const persistConfig = {
     storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, enterUriReducer);
-
 const store = configureStore({
     reducer: {
-        enterUri: persistedReducer,
+        enterUri: persistReducer(persistConfig, enterUriReducer),
     },
 });
 
