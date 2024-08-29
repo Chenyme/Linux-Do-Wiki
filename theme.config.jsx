@@ -4,6 +4,7 @@ import ScrollToTop from './components/global/ScrollToTop';
 import ThemeWrapper from "./components/common/wrapper/ThemeWrapper";
 import UserAvatar from "./components/pages/user/useravatar";
 import React from "react";
+import TestLayout from './components/pages/test/TestLayout';
 
 export default {
   docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/blob/main',
@@ -241,5 +242,8 @@ export default {
       day: 'numeric'
     };
     return `最后更新于 ${date.toLocaleDateString('zh-CN', options)}`;
+  },
+  components: {
+      TestLayout,
   }
 }

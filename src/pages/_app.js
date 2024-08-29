@@ -12,7 +12,6 @@ function MyApp({ Component, pageProps }) {
     const dispatch = store.dispatch;
     const enterUri = store.getState().enterUri.value;
 
-    // http://localhost:3000/Linux-Do/rules
     useEffect(() => {
         const user = Cookie.get('user');
         if (user) {
@@ -27,8 +26,6 @@ function MyApp({ Component, pageProps }) {
                 router.push('/login');
             }
         }
-
-
     }, [router.pathname]);
 
     if (!isAuthenticated && router.pathname !== '/login') {
