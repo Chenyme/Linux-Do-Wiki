@@ -5,6 +5,7 @@ import ThemeWrapper from "./components/common/wrapper/ThemeWrapper";
 import UserAvatar from "./components/pages/user/useravatar";
 import React from "react";
 import TestLayout from './components/pages/test/TestLayout';
+import StandardLayout from "./components/common/StandardLayout";
 
 export default {
   docsRepositoryBase: 'https://github.com/Chenyme/Linux-Do-Wiki/blob/main',
@@ -180,13 +181,29 @@ export default {
         );
       }
 
+        if (title === "共建指南") {
+            return (
+                <div style={{display: "flex", alignItems: "center"}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0000FF"
+                         className="bi bi-rulers" viewBox="0 0 16 16">
+                        <path
+                            d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1H1z"/>
+                    </svg>
+                    &nbsp;&nbsp;
+                    <span><b>{title}</b></span>
+                </div>
+            );
+        }
+
         if (title === "社区服务") {
-          return (
-            <div style={{display: "flex", alignItems: "center"}}>
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#87CEFA" class="bi bi-grid-1x2-fill" viewBox="0 0 16 16">
-                <path d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/>
-              </svg>
-            &nbsp;&nbsp;
+            return (
+                <div style={{display: "flex", alignItems: "center"}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="#87CEFA"
+                         class="bi bi-grid-1x2-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm9 0a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1zm0 9a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1z"/>
+                    </svg>
+                    &nbsp;&nbsp;
             <span><b>{title}</b></span>
             </div>
           );
@@ -244,6 +261,7 @@ export default {
     return `最后更新于 ${date.toLocaleDateString('zh-CN', options)}`;
   },
   components: {
+      StandardLayout,
       TestLayout,
   }
 }

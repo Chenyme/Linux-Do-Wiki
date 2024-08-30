@@ -17,7 +17,7 @@ const TestLayout = ({ children }) => {
             </main>
             <footer style={{ marginTop: '20px', borderTop: '1px solid #ccc', padding: '10px', textAlign: 'center' }}>
                TEST footer TEST
-                <p>title: {useConfig().frontMatter.title}</p>
+                <p>title: {useConfig().frontMatter.contributor !== undefined ? "贡献者：" + useConfig().frontMatter.contributor : null}</p>
                 <p>createTime: {useConfig().frontMatter.createTime}</p>
             </footer>
         </div>
